@@ -1,0 +1,134 @@
+/* Colores más vivos */
+:root {
+  --main-color: #3aa6f0; /* Azul cielo brillante */
+  --secondary-color: #ff7f50; /* Naranja cálido */
+  --accent-color: #4caf50; /* Verde menta fresco */
+  --text-color: #333333;
+  --background-color: #ffffff; /* Fondo blanco limpio */
+  --background-gradient: linear-gradient(135deg, #f0f9ff 0%, #fef9e7 100%);
+}
+
+/* Barra Superior */
+.top-bar {
+  background-color: var(--main-color);
+  color: #ffffff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* Encabezado Principal */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: var(--background-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  width: 140px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--secondary-color);
+}
+
+/* Sección de Bienvenida */
+.welcome-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 10%;
+  background: var(--background-gradient);
+}
+
+.welcome-text h1 {
+  font-size: 3rem;
+  color: var(--main-color);
+}
+
+.welcome-text p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-top: 10px;
+}
+
+.learn-more-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.learn-more-btn:hover {
+  background-color: var(--accent-color);
+}
+
+/* Sección de Servicios */
+.services-section {
+  padding: 50px 10%;
+  background-color: var(--background-color);
+  text-align: center;
+}
+
+.services-section h2 {
+  color: var(--secondary-color);
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: var(--text-color);
+  font-size: 1rem;
+}
