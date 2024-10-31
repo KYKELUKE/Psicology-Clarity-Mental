@@ -1,0 +1,255 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Barra Superior */
+.top-bar {
+  background-color: #5d9aa4;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.top-bar .contact-info span,
+.top-bar .social-icons a {
+  margin-right: 10px;
+}
+
+.top-bar .social-icons a {
+  color: #fff;
+}
+
+/* Encabezado Principal */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #f4f4f9;
+  border-bottom: 2px solid #3a3a3a;
+}
+
+/* Logo */
+header .logo {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+header .logo img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+header .logo .title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Navegación */
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  color: #3a3a3a;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 2px solid #3a3a3a;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+  background-color: #3a3a3a;
+  color: #fff;
+}
+
+header nav ul li a.active {
+  background-color: #3a3a3a;
+  color: #fff;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  overflow: hidden;
+  color: #555;
+  text-align: center;
+  padding: 100px 20px;
+  background-image: url("/Assets/img/bluesky.sp.png"); /* Cambia a tu imagen de fondo */
+  background-size: cover;
+}
+
+/* Nubes con CSS */
+.clouds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Estilo de las nubes */
+.cloud {
+  position: absolute;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 100px;
+}
+
+/* Forma de nube más realista usando combinaciones */
+.cloud {
+  width: 200px;
+  height: 120px;
+  background: #fff;
+  border-radius: 100px;
+  opacity: 0.8;
+}
+
+.cloud::before,
+.cloud::after {
+  content: "";
+  position: absolute;
+  background: #fff;
+  border-radius: 100px;
+  opacity: 0.8;
+}
+
+/* Formas de nube más realista */
+.cloud::before {
+  width: 80px;
+  height: 80px;
+  top: -30px; /* Ajusta la posición para dar forma */
+  left: 20px; /* Ajusta la posición para dar forma */
+}
+
+.cloud::after {
+  width: 100px;
+  height: 100px;
+  top: -20px; /* Ajusta la posición para dar forma */
+  left: 70px; /* Ajusta la posición para dar forma */
+}
+
+/* Animaciones de nubes */
+@keyframes moveClouds {
+  0% {
+    transform: translateX(-200px); /* Comienza desde la izquierda */
+  }
+  100% {
+    transform: translateX(
+      100vw
+    ); /* Mueve las nubes completamente a la derecha */
+  }
+}
+
+/* Estilo específico de las nubes */
+.cloud:nth-child(1) {
+  width: 220px;
+  height: 130px;
+  top: 30%;
+  left: -20%;
+  animation: moveClouds 30s linear infinite;
+}
+
+.cloud:nth-child(2) {
+  width: 180px;
+  height: 110px;
+  top: 20%;
+  left: 50%;
+  animation: moveClouds 25s linear infinite;
+}
+
+.cloud:nth-child(3) {
+  width: 200px;
+  height: 120px;
+  top: 10%;
+  left: 70%;
+  animation: moveClouds 20s linear infinite;
+}
+
+.cloud:nth-child(4) {
+  width: 240px;
+  height: 140px;
+  top: 40%;
+  left: -30%;
+  animation: moveClouds 35s linear infinite;
+}
+
+.cloud:nth-child(5) {
+  width: 200px;
+  height: 120px;
+  top: 5%;
+  left: 80%;
+  animation: moveClouds 28s linear infinite;
+}
+
+/* Estilo del texto en la sección hero */
+.hero h1 {
+  font-size: 48px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero p {
+  font-size: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Icono de desplazamiento */
+.scroll-icon {
+  font-size: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Sección de beneficios */
+.benefits {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.benefits h2 {
+  font-size: 36px;
+}
+
+.benefit-items {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.benefit-item {
+  width: 30%;
+  text-align: center;
+}
+
+.benefit-item img {
+  width: 60px;
+  height: auto;
+}
