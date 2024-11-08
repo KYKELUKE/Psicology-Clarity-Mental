@@ -83,8 +83,8 @@ header .logo .title {
 
 /* Navegación */
 header nav {
-  display: flex; /* Asegura que el menú sea flexible */
-  align-items: center; /* Centra verticalmente los elementos dentro del nav */
+  display: flex;
+  align-items: center;
 }
 
 header nav ul {
@@ -99,23 +99,47 @@ header nav ul li {
 }
 
 header nav ul li a {
-  color: #3a3a3a; /* Color principal de los enlaces */
+  color: #3a3a3a;
   font-weight: bold;
-  padding: 10px 20px; /* Espacio interior del botón */
-  border: 2px solid #3a3a3a; /* Borde del botón */
-  border-radius: 20px; /* Bordes redondeados */
+  padding: 10px 20px;
+  border: 2px solid #3a3a3a;
+  border-radius: 20px;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 header nav ul li a:hover {
-  background-color: #3a3a3a; /* Fondo oscuro al pasar el cursor */
-  color: #fff; /* Color de texto en hover */
+  background-color: #3a3a3a;
+  color: #fff;
 }
 
 header nav ul li a.active {
-  background-color: #3a3a3a; /* Fondo para el enlace activo */
+  background-color: #3a3a3a;
   color: #fff;
+}
+.dropdown-menu {
+  background-color: #fff; /* Fondo blanco */
+  border: 1px solid #ddd; /* Borde gris claro */
+  border-radius: 5px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+  opacity: initial; /* Inicialmente invisible */
+}
+
+/* Mostrar el dropdown cuando está activo */
+.dropdown.show .dropdown-menu {
+  opacity: 1; /* Hacerlo visible */
+  transform: translateY(0); /* Regresar a su posición original */
+}
+/* Estilo de los elementos dentro del dropdown */
+.dropdown-item {
+  padding: 10px 20px; /* Espaciado dentro de los elementos */
+  color: #333; /* Color de texto */
+  transition: background-color 0.2s; /* Transición para el fondo */
+}
+
+/* Efecto al pasar el ratón por encima */
+.dropdown-item:hover {
+  background-color: #f1f1f1; /* Fondo claro al pasar el ratón */
 }
 
 /* Sección de Bienvenida */
@@ -289,4 +313,17 @@ header nav ul li a.active {
   .equipo-seccion h2 {
     font-size: 2rem; /* Tamaño de fuente más pequeño para el título */
   }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
