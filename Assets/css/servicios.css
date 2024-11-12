@@ -1,4 +1,11 @@
-/* Estilos generales */
+/* Variables de color */
+:root {
+  --main-color: #5d9aa4; /* Azul verde suave */
+  --secondary-color: #f0f0f0; /* Lila pastel */
+  --accent-color: #88b04b; /* Verde calmante */
+  --text-color: #2f3e46; /* Gris oscuro */
+  --background-color: #f7f7f7; /* Fondo gris claro */
+}
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -124,156 +131,131 @@ header nav ul li a.active {
 .dropdown-item:hover {
   background-color: #f1f1f1; /* Fondo claro al pasar el ratón */
 }
-/* Estilos generales para la sección */
+
+/* Estilo de la sección de especialistas */
 .section-content {
-  display: flex;
-  flex-direction: row; /* Alineamos el contenido en una fila (lado a lado) */
-  align-items: center; /* Alineamos los items en el centro verticalmente */
-  justify-content: space-between; /* Espaciado entre los elementos */
-  padding: 40px 20px;
-  background-color: #f9fafb; /* Fondo más suave */
+  background-color: #fff;
+  padding: 60px 30px;
+  text-align: center;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 60px;
+}
+
+.especial {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.especial .title {
+  font-size: 2.5rem;
+  color: var(--main-color);
+  margin-bottom: 20px;
+}
+
+.especial .descripcion {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.oficina-img {
   margin-top: 30px;
 }
 
-/* Estilos para el header de la sección */
-.especial {
-  flex: 1; /* Toma el 50% del espacio disponible */
-  text-align: left; /* Alineación del texto a la izquierda */
-  margin-right: 20px; /* Margen entre el texto y la imagen */
-}
-
-/* Estilos para el título */
-.title {
-  font-size: 2.8rem;
-  color: #34495e; /* Título con un color más elegante */
-  font-family: "Roboto", sans-serif;
-  margin-bottom: 20px;
-  line-height: 1.2;
-}
-
-/* Estilos para la descripción */
-.descripcion {
-  font-size: 1.1rem;
-  color: #7f8c8d;
-  font-family: "Arial", sans-serif;
-  line-height: 1.7;
-  margin-top: 10px;
-  padding: 0 20px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Estilos para el contenedor de la imagen */
-.oficina-img {
-  flex: 1; /* Toma el 50% del espacio disponible */
-  margin-left: 20px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  max-width: 100%;
-}
-
-/* Estilos para la imagen dentro del contenedor */
 .oficina-img__image {
   width: 100%;
-  height: auto;
-  transition: transform 0.3s ease-in-out;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Efecto hover para la imagen */
-.oficina-img__image:hover {
-  transform: scale(1.05);
+/* Sección de lista de servicios */
+.section {
+  padding: 60px 30px;
+  text-align: center;
+  background-color: var(--secondary-color);
 }
 
-/* Lista de servicios */
+.titulo-seccion {
+  font-size: 2rem;
+  color: var(--main-color);
+  margin-bottom: 20px;
+}
+
 .lista-servicios {
   list-style-type: none;
+  margin: 0;
   padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .lista-servicios li {
-  background-color: #ffffff;
-  margin: 15px 0;
-  padding: 15px;
+  background-color: #fff;
+  padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.lista-servicios li:hover {
-  transform: translateY(-5px);
-  background-color: #ffedd5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
 }
 
 .lista-servicios li a {
-  color: #007bff;
   text-decoration: none;
-  font-weight: bold;
+  color: var(--main-color);
   font-size: 1.1rem;
 }
 
-.lista-servicios li a:hover {
-  text-decoration: underline;
-  color: #0056b3;
+.lista-servicios li:hover {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+.lista-servicios li:hover a {
+  color: #fff;
+}
+
+/* Sección de descripciones de especialidades */
+.descripcion {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  max-width: 900px;
+  margin: 20px auto;
+  line-height: 1.6;
 }
 
 /* Pie de página */
 .pie-pagina {
+  background-color: var(--main-color);
+  color: white;
   text-align: center;
   padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
   margin-top: 40px;
-  border-radius: 10px;
 }
 
 .pie-pagina p {
   font-size: 1rem;
-  color: #666;
+  margin: 0;
 }
 
-/* Diseño responsivo */
+/* Media Queries */
 @media (max-width: 768px) {
-  header h1 {
+  .lista-servicios {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .lista-servicios {
+    grid-template-columns: 1fr;
+  }
+  .titulo-seccion {
+    font-size: 1.8rem;
+  }
+  .especial .title {
     font-size: 2rem;
   }
-
-  header .descripcion {
-    font-size: 1rem;
-  }
-
-  .section {
-    padding: 20px;
-  }
-
-  .titulo-seccion {
-    font-size: 1.6rem;
-  }
-
-  .descripcion {
-    font-size: 1rem;
-    margin-bottom: 15px;
-  }
-
-  .lista-servicios li {
-    padding: 12px;
-  }
-
-  .pie-pagina {
-    padding: 15px;
-  }
-}
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 6px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
 }
