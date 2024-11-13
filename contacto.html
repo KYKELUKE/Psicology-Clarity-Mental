@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clarity Mental - Inicio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-..." />
+    <link rel="stylesheet" href="./Assets/css/contacto.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" /> 
+       <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  </head>
+
+
+  <body>
+    <!-- Barra Superior -->
+    <div class="top-bar">
+      <div class="contact-info">
+        <span class="animate__animated animate__fadeIn">📞 (01) 4800 864</span>
+        <span class="animate__animated animate__fadeIn">
+          ✉️
+          <a href="mailto:contacto@bienestarpsicologico.com"
+            >contacto@bienestarpsicologico.com</a
+          >
+        </span>
+      </div>
+      <div class="social-icons">
+        <a
+          href="#"
+          aria-label="Facebook"
+          class="animate__animated animate__fadeIn"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a
+          href="#"
+          aria-label="Instagram"
+          class="animate__animated animate__fadeIn"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a
+          href="#"
+          aria-label="LinkedIn"
+          class="animate__animated animate__fadeIn"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+      </div>
+    </div>
+    <header>
+      <div class="logo">
+        <img
+          src="Assets/img/LOGO-removebg-preview (1).png"
+          alt="Logo Clarity Mental" />
+        <h1 class="title">Clarity Mental</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li class="dropdown">
+            <a
+              href="#"
+              class="dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              >Acerca de</a
+            >
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Nuestra Historia</a></li>
+              <li>
+                <a class="dropdown-item" href="EquipoClaritymental.html"
+                  >Nuestro Equipo</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="Informacion.html">informacion</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+   <!-- Encabezado -->
+<header class="header">
+    <div class="header-content">
+      <h2 class="header-title">Cuéntanos de tus problemas</h2>
+      <p class="header-subtitle">Ayudarte es nuestro Propósito</p>
+    </div>
+  </header>
+  
+  <!-- Formulario de contacto -->
+  <section class="contact-form">
+    <form class="form">
+      <input type="text" class="form-input" placeholder="Nombre" />
+      <input type="text" class="form-input" placeholder="Apellidos" />
+      <input type="email" class="form-input" placeholder="Email" />
+      <textarea class="form-textarea" placeholder="Mensaje"></textarea>
+      <button class="form-button">ENVIAR</button>
+    </form>
+  </section>
+  
+<!-- Información de contacto -->
+<section class="info-section">
+    <div class="info-item">
+      <i class="fas fa-phone-alt info-icon" style="color: red;"></i>
+      <p class="info-text">
+        <strong>(01) 4800 864</strong><br />
+        Llámanos para orientación o reserva de citas. Si las líneas están ocupadas, déjanos tu mensaje al correo de la institución.
+      </p>
+    </div>
+    <div class="info-item">
+      <i class="fab fa-whatsapp info-icon" style="color: green;"></i>
+      <p class="info-text">
+        <strong>(01) 950 849 686</strong><br />
+        Escríbenos en nuestros WhatsApp para información sobre nuestros servicios o para reserva de citas.
+      </p>
+    </div>
+    <div class="info-item">
+      <i class="fas fa-envelope info-icon" style="color: blue;"></i>
+      <p class="info-text">
+        <strong>Escríbenos</strong><br />
+        Recepción 24/7 vía correo o Messenger. Te responderemos con la mayor prontitud.
+      </p>
+      <p class="info-text">
+        <strong>CORREO:</strong><br />
+        atencion@kalmaperu.org
+      </p>
+      <p class="info-text">
+        <strong>Messenger</strong><br />
+        (Vía Messenger)
+      </p>
+    </div>
+    <div class="info-item">
+      <i class="fas fa-home info-icon" style="color: #007bff;"></i>
+      <p class="info-text">
+        <strong>Nuestra casa</strong><br />
+        Tenemos un espacio presencial para ti, pero por el momento queremos protegerte y protegernos. Por eso atendemos virtual.
+      </p>
+    </div>
+  </section>
+  </section>
+  
+  <!-- Mapa -->
+  <div id="map-container">
+    <div id="map"></div>
+  </div>
+  <script src="Assets/js/map.js"></script>
+  
+  <!-- Colaboradores y clientes -->
+  <section class="partners">
+    <h3 class="partners-title">Colaboradores y Clientes</h3>
+    <div class="partners-logos">
+      <img src="cliente1.png" class="partner-logo" alt="Cliente 1" />
+      <img src="cliente2.png" class="partner-logo" alt="Cliente 2" />
+      <img src="cliente3.png" class="partner-logo" alt="Cliente 3" />
+      <img src="cliente4.png" class="partner-logo" alt="Cliente 4" />
+    </div>
+  </section>
+  
+  <!-- Pie de página -->
+  <footer class="footer">
+    <p class="footer-text">Atención previa reserva de cita</p>
+    <p class="footer-text">
+      <strong>Dirección:</strong><br />
+      Nuestra casa (Atención virtual por el momento)
+    </p>
+    <div class="social-icons">
+      <i class="fab fa-facebook-f social-icon"></i>
+      <i class="fab fa-instagram social-icon"></i>
+    </div>
+  </body>
+</html>

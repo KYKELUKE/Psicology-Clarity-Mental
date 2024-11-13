@@ -1,0 +1,191 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+/* Barra Superior */
+.top-bar {
+  background-color: #5d9aa4;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.top-bar .contact-info span,
+.top-bar .social-icons a {
+  margin-right: 10px;
+}
+
+.top-bar .social-icons a {
+  color: #fff;
+}
+
+/* Encabezado Principal */
+header {
+  display: flex;
+  justify-content: center; /* Centra todo el contenido en el header */
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #f4f4f9; /* Fondo suave */
+  border-bottom: 2px solid #3a3a3a; /* Color del borde inferior */
+}
+
+/* Logo */
+header .logo {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Espacio entre el logo y el menú */
+}
+
+header .logo img {
+  width: 50px; /* Tamaño base de la imagen */
+  height: auto;
+  margin-right: 10px; /* Espacio entre el logo y el texto */
+  transform: scale(1.2); /* Ajuste en el tamaño */
+}
+
+header .logo .title {
+  font-size: 1.5rem; /* Tamaño del texto para el nombre de la empresa */
+  font-weight: bold;
+  color: #333; /* Color del título del logo */
+}
+/* Navegación */
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  color: #3a3a3a;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 2px solid #3a3a3a;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+  background-color: #3a3a3a;
+  color: #fff;
+}
+
+header nav ul li a.active {
+  background-color: #3a3a3a;
+  color: #fff;
+}
+.dropdown-menu {
+  background-color: #fff; /* Fondo blanco */
+  border: 1px solid #ddd; /* Borde gris claro */
+  border-radius: 5px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+  opacity: initial; /* Inicialmente invisible */
+}
+
+/* Mostrar el dropdown cuando está activo */
+.dropdown.show .dropdown-menu {
+  opacity: 1; /* Hacerlo visible */
+  transform: translateY(0); /* Regresar a su posición original */
+}
+/* Estilo de los elementos dentro del dropdown */
+.dropdown-item {
+  padding: 10px 20px; /* Espaciado dentro de los elementos */
+  color: #333; /* Color de texto */
+  transition: background-color 0.2s; /* Transición para el fondo */
+}
+
+/* Efecto al pasar el ratón por encima */
+.dropdown-item:hover {
+  background-color: #f1f1f1; /* Fondo claro al pasar el ratón */
+}
+
+/* Reservación */
+.reservation {
+  padding: 120px;
+  text-align: center;
+  background-color: #efefef;
+  font-size: 20px;
+
+  && h2 {
+    font-size: 70px;
+    padding: 50px;
+  }
+}
+
+.reservation h2 a {
+  color: #ffa500;
+}
+
+/* Servicios */
+.services-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 120px;
+}
+
+.service-box {
+  flex: 1 1 300px;
+  text-align: center;
+  padding: 120px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.service-box h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Información de Cuenta */
+.bank-info {
+  padding: 120px;
+  background-color: #f9f9f9;
+  text-align: center;
+  font-size: 30px;
+}
+
+/* Colaboradores */
+.collaborators-section {
+  padding: 120px;
+  text-align: center;
+  background-color: #efefef;
+}
+
+.collaborators-logos img {
+  width: 100px;
+  margin: 10px;
+}
