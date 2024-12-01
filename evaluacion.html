@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evaluación - Clarity Mental</title>
+    <link rel="stylesheet" href="Assets/css/evaluation.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  </head>
+  <body class="evaluation-body">
+    <!-- Loader -->
+    <div class="loader" id="loader" style="display: none">
+      <div class="spinner"></div>
+      <p>Calculando resultados...</p>
+    </div>
+
+    <!-- Encabezado -->
+    <header class="evaluation-header animate__animated animate__fadeInDown">
+      <h1>Evaluación Inicial</h1>
+      <p>Una forma rápida de saber cómo podemos ayudarte.</p>
+    </header>
+
+    <!-- Contenedor del formulario -->
+    <main class="evaluation-container animate__animated animate__fadeInUp">
+      <form id="evaluationForm">
+        <!-- Preguntas -->
+        <section class="question-section">
+          <h2>1. ¿Con qué frecuencia te sientes desanimado o deprimido?</h2>
+          <div class="options">
+            <label><input type="radio" name="q1" value="nunca" /> Nunca</label>
+            <label
+              ><input type="radio" name="q1" value="rara_vez" /> Rara vez</label
+            >
+            <label
+              ><input type="radio" name="q1" value="frecuente" />
+              Frecuentemente</label
+            >
+            <label
+              ><input type="radio" name="q1" value="siempre" /> Siempre</label
+            >
+          </div>
+        </section>
+
+        <section class="question-section">
+          <h2>2. ¿Tienes dificultades para concentrarte?</h2>
+          <div class="options">
+            <label><input type="radio" name="q2" value="nunca" /> Nunca</label>
+            <label
+              ><input type="radio" name="q2" value="rara_vez" /> Rara vez</label
+            >
+            <label
+              ><input type="radio" name="q2" value="frecuente" />
+              Frecuentemente</label
+            >
+            <label
+              ><input type="radio" name="q2" value="siempre" /> Siempre</label
+            >
+          </div>
+        </section>
+
+        <section class="question-section">
+          <h2>3. ¿Sientes preocupación excesiva la mayoría del tiempo?</h2>
+          <div class="options">
+            <label><input type="radio" name="q3" value="nunca" /> Nunca</label>
+            <label
+              ><input type="radio" name="q3" value="ocasionalmente" />
+              Ocasionalmente</label
+            >
+            <label
+              ><input type="radio" name="q3" value="frecuente" />
+              Frecuentemente</label
+            >
+            <label
+              ><input type="radio" name="q3" value="siempre" /> Siempre</label
+            >
+          </div>
+        </section>
+
+        <!-- Más preguntas -->
+        <section class="question-section">
+          <h2>4. ¿Has experimentado insomnio recientemente?</h2>
+          <div class="options">
+            <label><input type="radio" name="q4" value="no" /> No</label>
+            <label><input type="radio" name="q4" value="leve" /> Leve</label>
+            <label
+              ><input type="radio" name="q4" value="moderado" /> Moderado</label
+            >
+            <label><input type="radio" name="q4" value="grave" /> Grave</label>
+          </div>
+        </section>
+
+        <section class="question-section">
+          <h2>5. ¿Sientes fatiga constante?</h2>
+          <div class="options">
+            <label><input type="radio" name="q5" value="nunca" /> Nunca</label>
+            <label
+              ><input type="radio" name="q5" value="ocasionalmente" />
+              Ocasionalmente</label
+            >
+            <label
+              ><input type="radio" name="q5" value="frecuente" />
+              Frecuentemente</label
+            >
+            <label
+              ><input type="radio" name="q5" value="siempre" /> Siempre</label
+            >
+          </div>
+        </section>
+
+        <!-- Botón de Envío -->
+        <div class="form-actions">
+          <button
+            type="submit"
+            class="btn-submit animate__animated animate__pulse">
+            Enviar Respuestas
+          </button>
+        </div>
+      </form>
+    </main>
+
+    <!-- Modal de Resultados -->
+    <div id="resultsModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Resultados de la Evaluación</h2>
+        <p id="resultsText"></p>
+
+        <!-- Botones -->
+        <div class="modal-buttons">
+          <button id="closeModalBtn">Cerrar</button>
+          <button id="scheduleAppointmentBtn">Agendar una cita</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="Assets/js/evaluation.js"></script>
+  </body>
+</html>
