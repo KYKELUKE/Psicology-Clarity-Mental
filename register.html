@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de Registro</title>
+    <link rel="stylesheet" href="Assets/css/registro.css" />
+  </head>
+  <body>
+    <div class="split-screen">
+      <!-- Sección de la ilustración -->
+      <div class="left-panel">
+        <img src="Assets/img/Arte-bruta.webp" alt="Ilustración de tortuga" />
+      </div>
+
+      <!-- Sección del formulario -->
+      <div class="right-panel">
+        <div class="form-content">
+          <div class="logo">
+            <img
+              src="Assets/img/LOGO-removebg-preview (1).png"
+              alt="Logo Selia" />
+          </div>
+          <h1>Regístrate</h1>
+          <p>
+            ¿Ya tienes cuenta? <a href="iniciarsesion.html">Inicia sesión</a>
+          </p>
+
+          <form>
+            <div class="input-group">
+              <input type="text" placeholder="Nombre completo" required />
+              <span class="icon">👤</span>
+            </div>
+            <div class="input-group">
+              <input type="email" placeholder="Correo electrónico" required />
+              <span class="icon">📧</span>
+            </div>
+            <div class="input-group">
+              <input type="password" placeholder="Contraseña" required />
+              <span class="icon">🔒</span>
+            </div>
+            <div class="input-group">
+              <input
+                type="password"
+                placeholder="Confirma tu contraseña"
+                required />
+              <span class="icon">🔒</span>
+            </div>
+            <button type="submit" class="btn">Crear cuenta</button>
+          </form>
+
+          <div class="alternative-login">
+            <p>O regístrate con</p>
+            <button class="social-btn">Apple</button>
+            <button class="social-btn">Google</button>
+          </div>
+          <footer>
+            <p>Selia v1.1.0 | <a href="#">Legal</a></p>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="Assets/js/loader.js"></script>
+</html>
