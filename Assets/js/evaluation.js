@@ -38,11 +38,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Mostrar resultados en el modal
       resultsText.innerHTML = `
-
-          <p><strong>Síntomas posibles:</strong> <span id="symptoms">${result.symptoms}</span></p>
-          <p><strong>Porcentaje estimado de Estrés:</strong> <span id="stressPercentage">${result.stressPercentage}%</span></p>
-          <p><strong>Recomendación:</strong> ${result.recommendation}</p>
-        `;
+        <p><strong>Síntomas posibles:</strong> <span id="symptoms">${result.symptoms}</span></p>
+        <p><strong>Porcentaje estimado de Estrés:</strong> <span id="stressPercentage">${result.stressPercentage}%</span></p>
+        <p><strong>Recomendación:</strong> ${result.recommendation}</p>
+      `;
 
       // Mostrar el modal
       modal.style.display = "flex";

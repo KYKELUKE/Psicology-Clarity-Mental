@@ -1,31 +1,29 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const testimonials = document.querySelectorAll(".testimonial");
-  const nextBtn = document.querySelector(".next");
-  const prevBtn = document.querySelector(".prev");
+  const prevButton = document.querySelector(".prev-opinion");
+  const nextButton = document.querySelector(".next-opinion");
   let currentIndex = 0;
 
-  function showTestimonial(index) {
+  const showTestimonial = (index) => {
     testimonials.forEach((testimonial, idx) => {
       testimonial.classList.remove("active-testimonial");
       if (idx === index) {
         testimonial.classList.add("active-testimonial");
       }
     });
-  }
+  };
 
-  nextBtn.addEventListener("click", function (event) {
-    event.stopPropagation(); // Evitar interferencias con otros carruseles
+  nextButton.addEventListener("click", () => {
     currentIndex = (currentIndex + 1) % testimonials.length;
     showTestimonial(currentIndex);
   });
 
-  prevBtn.addEventListener("click", function (event) {
-    event.stopPropagation(); // Evitar interferencias con otros carruseles
+  prevButton.addEventListener("click", () => {
     currentIndex =
       (currentIndex - 1 + testimonials.length) % testimonials.length;
     showTestimonial(currentIndex);
   });
 
-  // Inicializamos el primer testimonio como activo
+  // Inicializa el primer testimonio como activo
   showTestimonial(currentIndex);
 });

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de Inicio de Sesión</title>
+    <link rel="stylesheet" href="Assets/css/inicio-sesion.css" />
+  </head>
+  <body>
+    <!-- Loader (oculto al inicio) -->
+    <div class="loader-container" style="display: none">
+      <div class="loader">
+        <div class="circle"></div>
+        <div class="curve"></div>
+      </div>
+    </div>
+    <div class="split-screen">
+      <!-- Sección de la ilustración -->
+      <div class="left-panel">
+        <img src="Assets/img/Arte-bruta.webp" alt="Ilustración de tortuga" />
+      </div>
+
+      <!-- Sección del formulario -->
+      <div class="right-panel">
+        <div class="form-content">
+          <div class="logo">
+            <img
+              src="Assets/img/LOGO-removebg-preview (1).png"
+              alt="Logo Selia" />
+          </div>
+          <h1>Inicia sesión</h1>
+          <p>¿No tienes cuenta? <a href="#">Regístrate</a></p>
+
+          <form>
+            <div class="input-group">
+              <input type="email" placeholder="Correo electrónico" required />
+              <span class="icon">📧</span>
+            </div>
+            <div class="input-group">
+              <input type="password" placeholder="Contraseña" required />
+              <span class="icon">👁️</span>
+            </div>
+            <div class="forgot-password">
+              <a href="#">¿Olvidaste tu contraseña?</a>
+            </div>
+            <button type="submit" class="btn">Ingresar</button>
+          </form>
+
+          <div class="alternative-login">
+            <p>O continúa con</p>
+            <button class="social-btn">Apple</button>
+            <button class="social-btn">Google</button>
+          </div>
+          <footer>
+            <p>Selia v1.1.0 | <a href="#">Legal</a></p>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="Assets/js/loader.js"></script>
+</html>

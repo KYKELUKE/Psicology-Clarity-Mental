@@ -12,15 +12,15 @@
   ); /* Degradado suave */
 }
 
-/* Estilos generales */
+/* Asegurar que el cuerpo ocupe todo el alto */
+html,
 body {
   font-family: Arial, sans-serif;
+  height: 100%;
   margin: 0;
-  padding: 0;
-  color: var(--text-color);
-  background: var(--background-gradient);
-}
 
+  flex-direction: column;
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -326,4 +326,135 @@ header nav ul li a.active {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+/* Estilo general para el footer */
+.footer {
+  background-color: #2d3b40; /* Fondo oscuro */
+  color: #ffffff; /* Texto blanco */
+  width: 100.5%; /* Asegura que el footer ocupe todo el ancho */
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  flex-direction: column; /* Cambia la dirección del contenido a columna */
+  padding: 10px 5px; /* Espaciado dentro del footer */
+  box-sizing: border-box;
+  margin-left: -1vh;
+}
+/* Contenedor de las secciones dentro del footer */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Cuatro columnas iguales */
+  gap: 40px; /* Espacio entre las columnas */
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 20px; /* Centrado del contenedor */
+  text-align: center;
+}
+/* Logo del footer */
+.footer-logo img {
+  width: 140px; /* Ancho del logo */
+}
+
+/* Títulos de las secciones del footer */
+.footer-logo p,
+.footer-links a,
+.footer-contact a,
+.footer-social a {
+  font-size: 1.1rem;
+  color: #e1e7ee; /* Color de texto más suave */
+  text-decoration: none; /* Elimina subrayado de los enlaces */
+  transition: color 0.3s ease; /* Transición suave para el hover */
+}
+
+/* Títulos de las secciones (Enlaces, Contacto, Redes) */
+.footer-links h4,
+.footer-contact h4,
+.footer-social h4 {
+  font-size: 1.2rem;
+  color: #36b2a6; /* Verde turquesa para los títulos */
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Listas dentro de las secciones */
+.footer-links ul,
+.footer-contact ul,
+.footer-social ul {
+  list-style: none; /* Elimina los puntos de las listas */
+  padding: 0;
+}
+
+/* Espaciado entre los elementos de la lista */
+.footer-links li,
+.footer-contact li {
+  margin-bottom: 12px; /* Espacio entre cada ítem */
+}
+
+/* Hover de los enlaces */
+.footer-links a:hover,
+.footer-contact a:hover,
+.footer-social a:hover {
+  color: #36b2a6; /* Verde turquesa en hover */
+}
+
+/* Estilo para las redes sociales */
+.footer-social ul {
+  display: flex;
+  justify-content: center;
+  gap: 25px; /* Espacio entre los íconos */
+}
+
+.footer-social a {
+  font-size: 1.5rem; /* Tamaño adecuado para los íconos */
+  color: #e1e7ee; /* Color claro para los íconos */
+  transition: color 0.3s ease; /* Transición para el hover */
+}
+
+/* Hover en los íconos de redes sociales */
+.footer-social a:hover {
+  color: #36b2a6; /* Verde turquesa en hover */
+}
+
+/* Pie de página */
+.footer-bottom {
+  width: 100%;
+  background-color: #2d3b40;
+  color: #e1e7ee;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  border-top: 1px solid #36b2a6;
+  margin-top: 20px; /* Asegura que se separe del contenido del footer */
+  height: 50px;
+}
+
+/* Responsividad: Para pantallas pequeñas */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr; /* Solo dos columnas en pantallas más pequeñas */
+  }
+}
+
+/* Elimina los márgenes y padding predeterminados de los elementos */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo de los enlaces de los elementos de la lista */
+.footer-links a,
+.footer-contact a {
+  color: inherit; /* Hereda el color del elemento padre */
+  font-weight: 300;
+  text-decoration: none; /* Elimina subrayado */
+}
+
+/* Agregar margen superior al footer */
+.footer {
+  margin-top: 100px; /* Evita que se pegue al contenido superior */
 }

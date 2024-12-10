@@ -23,6 +23,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
+    
+  <!-- Contenedor del Loader -->
+  <div id="loader-container" class="loader-container">
+    <div class="loader-circle">
+      <div class="ball ball1"></div>
+      <div class="ball ball2"></div>
+      <div class="ball ball3"></div>
+      <div class="ball ball4"></div>
+      <div class="ball ball5"></div>
+      <div class="ball ball6"></div>
+      <div class="ball ball7"></div>
+    </div>
+  </div>
+
     <!-- Barra Superior -->
     <div class="top-bar">
       <div class="contact-info">
@@ -59,48 +73,76 @@
     
 
 
-    <header>
-      <div class="logo">
-        <img
-          src="Assets/img/LOGO-removebg-preview (1).png"
-          alt="Logo Clarity Mental" />
-        <h1 class="title">Clarity Mental</h1>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#">Inicio</a></li>
-          <li class="dropdown">
-            <a
-              href="#"
-              class="dropdown-toggle"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              >Acerca de</a
-            >
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Nuestra Historia</a></li>
-              <li>
-                <a class="dropdown-item" href="EquipoClaritymental.html"
-                  >Nuestro Equipo</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li><a href="servicios.html">Servicios</a></li>
-          <li><a href="Informacion.html">informacion</a></li>
-          <li><a href="#">Contacto</a></li>
-        </ul>
-        <br>
-      
-        <!-- Contenedor para los botones -->
-        <div class="nav-buttons">
-          <button class="init">Iniciar Sesión</button>
-          <button class="Register">Registrarse</button>
-        </div>
-        
-     
+<!-- Encabezado Principal -->
+<header>
+  <div class="logo">
+    <img
+      src="Assets/img/LOGO-removebg-preview (1).png"
+      alt="Logo Clarity Mental"
+    />
+    <h1 class="title">Clarity Mental</h1>
+  </div>
 
-    </header>
+  <!-- Íconos sociales (solo visibles en modo responsivo) -->
+  <div class="social-iconses">
+    <a
+      href="https://www.facebook.com/profile.php?id=61551566061805&mibextid=ZbWKwL"
+      aria-label="Facebook"
+      ><i class="fab fa-facebook-f"></i
+    ></a>
+    <a
+      href="https://www.instagram.com/claarity_mental?igsh=aWhudWV6MjgwMHl3"
+      aria-label="Instagram"
+      ><i class="fab fa-instagram"></i
+    ></a>
+    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+  </div>
+
+  <!-- Botón de menú desplegable -->
+  <button class="menu-toggle" aria-label="Toggle Navigation">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <nav>
+    <ul>
+      <li><a href="Inicio.html">Inicio</a></li>
+      <li class="dropdown">
+        <a
+          href="#"
+          class="dropdown-toggle"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Acerca de
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Nuestra Historia</a></li>
+          <li>
+            <a class="dropdown-item" href="EquipoClaritymental.html">
+              Nuestro Equipo
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#">Servicios</a></li>
+      <li><a href="#">Información</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+
+
+
+  <div class="nav-buttons">
+    <button class="init" onclick="showLoader()">Iniciar Sesión</button>
+
+    <button class="register" onclick="showLoader('register')">Registrarse</button>
+  </div>
+
+</header>
+    
+        
+
+
 
     <!-- Sección principal -->
     <section class="hero">
@@ -284,67 +326,122 @@
       </div>
     </section>
     
-
     <section class="opinions">
       <div class="testimonials-section">
-        <h2>¿Qué opinan de nosotros en <span>Facebook</span>?</h2>
+        <h2>Lo que opinan de nosotros en <span>Facebook</span></h2>
         <div class="testimonials-container">
-          <div class="testimonial active">
+          <div class="testimonial active-testimonial">
             <p>
-              La atención al usuario es buena, se preocupan por el seguimiento del tratamiento recibido...
+              “La atención al usuario es excepcional, resolvieron todas mis dudas rápidamente. Muy recomendado.”
             </p>
             <div class="testimonial-author">
-              <img src="Assets/img/User.png" alt="Elizabeth Gómez" />
-              <span>Elizabeth Gómez</span>
+              <img src="Assets/img/Cliente.png" alt="Elizabeth Gómez">
+              <div class="author-info">
+                <span class="author-name">Elizabeth Gómez</span>
+                <span class="author-role">Cliente frecuente</span>
+              </div>
             </div>
           </div>
           <div class="testimonial">
             <p>
-              Desde el inicio contacto con ellos fue la atención de super especial, es algo especial el buen trato...
+              “Desde el inicio, la experiencia fue profesional y amigable. Definitivamente volveré a trabajar con ellos.”
             </p>
             <div class="testimonial-author">
-              <img src="url-imagen2.jpg" alt="Renzo Luque" />
-              <span>Renzo Luque</span>
+              <img src="Assets/img/Colaborador.png" alt="Renzo Luque">
+              <div class="author-info">
+                <span class="author-name">Renzo Luque</span>
+                <span class="author-role">Colaborador</span>
+              </div>
             </div>
           </div>
         </div>
-    
-        <!-- Botones de navegación -->
-        <div class="pagination">
-          <div class="dot prev"></div>
-          <div class="dot next"></div>
+        <div class="opinions-buttons">
+          <button class="prev-opinion">❮</button>
+          <button class="next-opinion">❯</button>
         </div>
       </div>
     </section>
     
-    <section class="partners-section">
-      <div class="partners-container">
-        <h2>Colaboradores y <span>Clientes</span></h2>
-        <div class="partners-slider">
-          <div class="slider-track">
-            <!-- Imágenes iniciales que se mostrarán -->
-            <img src="Assets/img/Black and Green Typographical Green Energy Logo.png" alt="Primax" />
-            <img src="Assets/img/2.png" alt="Intercorp" />
-            <img src="Assets/img/uBOb7vMM_400x400.jpg" alt="Cliente 3" />
-            <img src="Assets/img/AUNA_0-min.jpeg" alt="AUNA" />
+    
+      <!-- Slider de Partners -->
+      <section class="partners-section">
+        <div class="partners-container">
+          <h2>Colaboradores y <span>Clientes</span></h2>
+          <div class="partners-slider">
+            <div class="slider-track">
+              <img src="Assets/img/Black and Green Typographical Green Energy Logo.png" alt="Primax">
+              <img src="Assets/img/2.png" alt="Intercorp">
+              <img src="Assets/img/uBOb7vMM_400x400.jpg" alt="Cliente 3">
+              <img src="Assets/img/AUNA_0-min.jpeg" alt="AUNA">
+            </div>
           </div>
-        </div>
-        <div class="slider-buttons">
-          <!-- Puntos de navegación -->
-          <div class="pagination">
-            <span class="dot active" data-index="0"></span>
+          <div class="slider-buttons">
+            <span class="dot active-partner" data-index="0"></span>
             <span class="dot" data-index="1"></span>
             <span class="dot" data-index="2"></span>
             <span class="dot" data-index="3"></span>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-container">
+            <!-- Logo del footer -->
+            <div class="footer-logo">
+                <img src="Assets/img/LOGO-removebg-preview (1).png" alt="Clarity Mental Logo" />
+                <p>Clarity Mental</p>
+            </div>
+            
+            <!-- Enlaces principales -->
+            <div class="footer-links">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Sobre nosotros</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            
+            <!-- Información de contacto -->
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="mailto:contacto@claritymental.org">contacto@claritymental.org</a></li>
+                    <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                    <li><p>Atención virtual vía Zoom</p></li>
+                </ul>
+            </div>
     
-    
+            <!-- Redes sociales -->
+            <div class="footer-social">
+                <h4>Síguenos</h4>
+                <ul>
+                    <li><a href="#" class="social-icon"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#" class="social-icon"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" class="social-icon"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+           <!-- Pie de página -->
+    <div class="footer-bottom">
+      <p>&copy; 2024 Clarity Mental. Todos los derechos reservados.</p>
+  </div>
+    </footer>
+    <!-- Contenedor del Loader -->
+<div id="loader-container" style="display: none;">
+  <!-- Aquí va tu animación del loader -->
+  <div class="loader">
+    <div class="circle"></div>
+    <div class="curve"></div>
+  </div>
+</div>
+
+    </body>
+    </html>
     
 
-  
     <script src="Assets/js/modal.js">
 
     </script>

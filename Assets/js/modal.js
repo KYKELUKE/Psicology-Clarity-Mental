@@ -60,13 +60,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const imagesPerSlide = 4; // Número de imágenes visibles
   let currentIndex = 0;
 
-  const updateImages = () => {
+  const updateSlider = () => {
     sliderTrack.innerHTML = "";
 
     for (let i = currentIndex; i < currentIndex + imagesPerSlide; i++) {
-      const imageSrc = images[i % images.length];
       const imgElement = document.createElement("img");
-      imgElement.src = imageSrc;
+      imgElement.src = images[i % images.length];
       imgElement.alt = `Imagen ${i + 1}`;
       sliderTrack.appendChild(imgElement);
     }
@@ -79,12 +78,66 @@ document.addEventListener("DOMContentLoaded", () => {
 
   dots.forEach((dot) => {
     dot.addEventListener("click", (event) => {
-      event.stopPropagation(); // Evitar interferencias con otros carruseles
+      event.stopPropagation(); // Evitar interferencias
       currentIndex = parseInt(dot.getAttribute("data-index")) * imagesPerSlide;
-      updateImages();
+      updateSlider();
     });
   });
 
-  // Inicializar el carrusel
-  updateImages();
+  updateSlider(); // Inicializar el carrusel
+});
+
+// Selección de elementos
+const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector("header nav");
+const dropdown = document.querySelectorAll(".dropdown");
+
+// Evento para el menú hamburguesa
+menuToggle.addEventListener("click", (event) => {
+  // Togglear el estado del menú
+  nav.classList.toggle("active");
+  event.stopPropagation(); // Evitar que el clic se propague al dropdown
+});
+
+// Cerrar el menú hamburguesa si se hace clic fuera de él
+document.addEventListener("click", (event) => {
+  // Si el clic está fuera del menú y el botón de hamburguesa
+  if (!nav.contains(event.target) && !menuToggle.contains(event.target)) {
+    nav.classList.remove("active"); // Cerrar el menú
+  }
+});
+
+// Impedir que el clic en el dropdown cierre el menú hamburguesa
+dropdown.forEach((item) => {
+  item.addEventListener("click", (event) => {
+    event.stopPropagation(); // Prevenir que el clic en el dropdown cierre el menú hamburguesa
+  });
+});
+
+// Manejar el dropdown en dispositivos de escritorio (cuando no hay hamburguesa)
+const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+dropdownToggles.forEach((toggle) => {
+  toggle.addEventListener("click", (event) => {
+    const parent = toggle.parentElement;
+    parent.classList.toggle("show");
+  });
+});
+
+// Función para mostrar el loader
+function showLoader() {
+  const loaderContainer = document.getElementById("loader-container");
+  loaderContainer.style.display = "flex"; // Mostrar el loader
+
+  // Esperar 2 segundos y luego redirigir a la página de inicio de sesión
+  setTimeout(function () {
+    window.location.href = "iniciarsesion.html"; // Redirige a la página de inicio de sesión
+  }, 2000); // 2000 milisegundos = 2 segundos
+}
+
+// Añadir el evento al botón para mostrar el loader y redirigir
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.querySelector(".init");
+  if (button) {
+    button.addEventListener("click", showLoader);
+  }
 });
