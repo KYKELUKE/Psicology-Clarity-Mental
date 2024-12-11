@@ -21,7 +21,7 @@
         <div class="therapy-info">
           <p><strong>Terapia Individual</strong></p>
           <p><i class="fas fa-video"></i> Videollamada</p>
-          <p><i class="fas fa-clock"></i> Duración: 60 minutos</p>
+          <p><i class="fas fa-clock"></i> Duración: 45 minutos</p>
         </div>
       </section>
 
@@ -31,26 +31,23 @@
           Hoy: <span id="today-date" class="date-box"></span>
         </p>
 
-        <div class="date-container">
-          <h2>Selecciona tu fecha</h2>
-          <div class="dates-selection">
-            <button class="date-btn" data-date="2024-12-12">Lun<br />12</button>
-            <button class="date-btn" data-date="2024-12-13">Mar<br />13</button>
-            <button class="date-btn" data-date="2024-12-14">Mié<br />14</button>
-            <button class="date-btn" data-date="2024-12-15">Jue<br />15</button>
-            <button class="date-btn" data-date="2024-12-16">Vie<br />16</button>
-            <button class="date-btn" data-date="2024-12-17">Sáb<br />17</button>
-            <button class="date-btn" data-date="2024-12-18">Dom<br />18</button>
-          </div>
+        <!-- En la sección de fechas -->
+        <div class="dates-selection">
+          <button class="date-btn" data-date="2024-12-12">Lun<br />12</button>
+          <button class="date-btn" data-date="2024-12-13">Mar<br />13</button>
+          <button class="date-btn" data-date="2024-12-14">Mié<br />14</button>
+          <button class="date-btn" data-date="2024-12-15">Jue<br />15</button>
+          <button class="date-btn" data-date="2024-12-16">Vie<br />16</button>
+          <button class="date-btn" data-date="2024-12-17">Sáb<br />17</button>
+          <button class="date-btn" data-date="2024-12-18">Dom<br />18</button>
         </div>
 
-        <label for="hora">Selecciona una Hora:</label>
+        <!-- En la sección de horas -->
         <div class="hours-selection">
           <button class="hour-btn">10:00 AM</button>
           <button class="hour-btn">12:00 PM</button>
           <button class="hour-btn">2:00 PM</button>
           <button class="hour-btn">4:00 PM</button>
-          <!-- Aquí se pueden añadir más horarios dinámicamente -->
         </div>
 
         <button type="button" class="btn" id="verMas">Ver más horarios</button>
@@ -60,7 +57,7 @@
         </div>
       </section>
 
-      <button type="button" id="continuar-btn" class="btn" disabled>
+      <button id="continuar-btn" class="btn" style="display: none">
         Continuar
       </button>
 

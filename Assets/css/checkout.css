@@ -1,0 +1,230 @@
+/* Fuente global */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7fa; /* Fondo suave, relajante */
+  color: #333;
+}
+
+/* Contenedor principal */
+.checkout-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.checkout-container:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Sombra de hover para darle dinamismo */
+}
+
+/* Mensaje de espera */
+.waiting-message {
+  text-align: center;
+  background-color: #e0f7fa; /* Color suave, relacionado con la calma */
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.waiting-message p {
+  font-size: 16px;
+  color: #00796b; /* Verde calmante */
+}
+
+.waiting-message strong {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Resumen de la cita */
+.appointment-summary {
+  margin-bottom: 40px;
+}
+
+.appointment-summary h2 {
+  font-size: 24px;
+  color: #00796b; /* Verde destacado */
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.appointment-summary h2 i {
+  font-size: 24px; /* Ajuste al tamaño del icono */
+  margin-right: 10px;
+  color: #00796b; /* Mantener el color verde */
+}
+
+.appointment-summary p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.appointment-summary strong {
+  font-weight: bold;
+}
+
+/* Cupón de descuento */
+.coupon-section {
+  background-color: #f1f8e9; /* Fondo suave verde claro */
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.coupon-section label {
+  font-size: 16px;
+  color: #00796b;
+  margin-right: 15px;
+}
+
+.coupon-section input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #00796b;
+  border-radius: 8px;
+  margin-right: 15px;
+  width: 250px;
+  outline: none;
+}
+
+.coupon-section button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.coupon-section button:hover {
+  background-color: #004d40;
+}
+
+.coupon-section button:active {
+  background-color: #003b33;
+}
+
+.payment-summary {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment-summary h3 {
+  color: #00796b;
+  font-size: 20px;
+}
+
+.payment-summary p {
+  font-size: 18px;
+  color: #333;
+}
+
+.add-card-button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.add-card-button:hover {
+  background-color: #004d40;
+}
+
+/* Opiniones de otros usuarios */
+.reviews-section {
+  background-color: #f1f8e9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.reviews-section h3 {
+  font-size: 22px;
+  color: #00796b;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.reviews-section h3 i {
+  font-size: 24px;
+  margin-right: 10px;
+  color: #00796b; /* Mantener el color verde */
+}
+
+.review {
+  background-color: #ffffff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.review p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.review strong {
+  color: #00796b;
+  font-weight: bold;
+}
+
+/* Botón de finalizar */
+#finalize-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#finalize-button:hover {
+  background-color: #004d40;
+}
+
+#finalize-button:active {
+  background-color: #003b33;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+  .checkout-container {
+    padding: 20px;
+  }
+
+  .coupon-section input {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  #payment-method {
+    width: 100%;
+  }
+
+  .reviews-section h3 {
+    font-size: 20px;
+  }
+}

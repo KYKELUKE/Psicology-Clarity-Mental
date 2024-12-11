@@ -8,45 +8,52 @@ body {
   color: #3a3a3a; /* Texto principal */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   max-width: 900px;
   margin: 20px auto;
   padding: 20px;
   background: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombras sutiles */
 }
 
 header {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px; /* Más espacio en la parte inferior */
 }
 
 header h1 {
-  font-size: 28px;
-  color: #5d9aa4; /* Color principal de Clarity Mental */
+  font-size: 32px; /* Aumenta el tamaño */
+  color: #5d9aa4; /* Color principal */
+  font-weight: 600; /* Aumenta el peso */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
 .subtitle {
-  font-size: 16px;
+  font-size: 18px;
   color: #666; /* Texto secundario */
+  margin-top: 10px;
 }
 
 /* Terapia Info */
 .therapy-info {
   background: #eaf6f8; /* Fondo suave */
-  border: 1px solid #5d9aa4; /* Borde principal */
-  padding: 15px;
+  border: 1px solid #5d9aa4;
+  padding: 20px;
   border-radius: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .therapy-info p {
-  margin: 5px 0;
+  margin: 8px 0;
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 14px;
+  gap: 10px;
+  font-size: 15px;
 }
 
 .therapy-info i {
@@ -55,74 +62,92 @@ header h1 {
 
 /* Fecha */
 .date-container {
-  margin: 20px 0;
+  margin: 30px 0;
 }
 
 .date-container h2 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #5d9aa4; /* Títulos */
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #5d9aa4;
+  font-weight: 500;
 }
 
+/* Botones de fecha */
 .dates-selection {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .date-btn {
-  background: #eaf6f8; /* Fondo botones */
-  color: #3a3a3a; /* Texto botones */
+  background: #eaf6f8;
+  color: #3a3a3a;
   border: 1px solid #5d9aa4;
-  padding: 10px 15px;
+  padding: 12px 18px;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
   cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background 0.3s, color 0.3s, transform 0.2s ease-in-out;
 }
 
 .date-btn:hover,
 .date-btn:focus {
-  background: #5d9aa4; /* Fondo al pasar el cursor */
-  color: #fff; /* Texto al pasar el cursor */
+  background: #36b2a6;
+  color: #fff;
+  transform: scale(1.05); /* Efecto de aumento */
+}
+
+.date-btn.selected {
+  background-color: #357abd; /* Nuevo color para selección */
+  color: #fff;
+  border: 1px solid #357abd;
 }
 
 /* Horarios */
 .hours-selection {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   flex-wrap: wrap;
   margin: 15px 0;
+  justify-content: center;
 }
 
 .hour-btn {
   background: #ffffff;
-  color: #5d9aa4; /* Texto */
+  color: #5d9aa4;
   border: 1px solid #ddd;
-  padding: 10px 15px;
+  padding: 12px 18px;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
   cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background 0.3s, color 0.3s, transform 0.2s ease-in-out;
 }
 
 .hour-btn:hover,
 .hour-btn:focus {
-  background: #f28a8a; /* Fondo hover */
-  color: #fff; /* Texto hover */
+  background: #f28a8a;
+  color: #fff;
+  transform: scale(1.05); /* Efecto de aumento */
+}
+
+.hour-btn.selected {
+  background-color: #357abd;
+  color: #fff;
+  border: 1px solid #357abd;
 }
 
 /* Botón principal */
 .btn {
   display: inline-block;
-  background: #5d9aa4; /* Fondo principal */
+  background: #5d9aa4;
   color: #fff;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border: none;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 16px;
   cursor: pointer;
   text-align: center;
   transition: background 0.3s ease, color 0.3s ease;
@@ -130,41 +155,59 @@ header h1 {
 
 .btn:hover,
 .btn:focus {
-  background: #357abd; /* Fondo hover */
+  background: #357abd;
+  transform: scale(1.05); /* Efecto de aumento */
 }
 
 /* Horarios adicionales */
 .more-hours {
-  margin-top: 15px;
+  margin-top: 20px;
   background: #f9f9f9;
-  padding: 15px;
+  padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
 }
 
+.more-hours p {
+  font-size: 16px;
+  color: #357abd;
+}
+
 /* Footer */
 footer {
-  margin-top: 30px;
+  margin-top: 40px;
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
   color: #888;
 }
 
 /* Botón de volver */
 .back-btn-container {
-  margin-top: 20px;
+  margin-top: 30px;
   text-align: center;
 }
 
 .back-btn {
-  color: #5d9aa4; /* Texto */
+  color: #36b2a6;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .back-btn:hover {
   text-decoration: underline;
 }
+
+/* Estilo para los botones seleccionados */
+.date-btn.selected {
+  background-color: #37dd76;
+  color: #fff;
+  border: 1px solid #357abd;
+}
+.hour-btn.selected {
+  background-color: red;
+}
+
+/* Scroll */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -176,4 +219,20 @@ footer {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+/* Animación de desplazamiento hacia la derecha */
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.slide-out-right {
+  animation: slideOutRight 0.5s ease forwards; /* Aplica la animación */
 }

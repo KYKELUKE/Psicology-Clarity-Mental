@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clarity Mental - Servicios</title>
+    <title>Clarity Mental - Inicio</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -14,11 +14,31 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM2A1C6cQG6z0xQvD6bbT7ktB6E9w5N9PlZf2P"
-      crossorigin="anonymous" />
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
   </head>
   <body>
+    <!-- Contenedor del Loader -->
+    <div id="loader-container" class="loader-container">
+      <div class="loader-circle">
+        <div class="ball ball1"></div>
+        <div class="ball ball2"></div>
+        <div class="ball ball3"></div>
+        <div class="ball ball4"></div>
+        <div class="ball ball5"></div>
+        <div class="ball ball6"></div>
+        <div class="ball ball7"></div>
+      </div>
+    </div>
+
     <!-- Barra Superior -->
     <div class="top-bar">
       <div class="contact-info">
@@ -32,13 +52,14 @@
       </div>
       <div class="social-icons">
         <a
-          href="#"
+          href="
+          https://www.facebook.com/profile.php?id=61551566061805&mibextid=ZbWKwL"
           aria-label="Facebook"
           class="animate__animated animate__fadeIn"
           ><i class="fab fa-facebook-f"></i
         ></a>
         <a
-          href="#"
+          href="https://www.instagram.com/claarity_mental?igsh=aWhudWV6MjgwMHl3"
           aria-label="Instagram"
           class="animate__animated animate__fadeIn"
           ><i class="fab fa-instagram"></i
@@ -52,6 +73,7 @@
       </div>
     </div>
 
+    <!-- Encabezado Principal -->
     <header>
       <div class="logo">
         <img
@@ -60,12 +82,25 @@
         <h1 class="title">Clarity Mental</h1>
       </div>
 
-      <!-- Botón de la hamburguesa -->
-      <div class="hamburger" onclick="toggleMenu()">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
+      <!-- Íconos sociales (solo visibles en modo responsivo) -->
+      <div class="social-iconses">
+        <a
+          href="https://www.facebook.com/profile.php?id=61551566061805&mibextid=ZbWKwL"
+          aria-label="Facebook"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/claarity_mental?igsh=aWhudWV6MjgwMHl3"
+          aria-label="Instagram"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
       </div>
+
+      <!-- Botón de menú desplegable -->
+      <button class="menu-toggle" aria-label="Toggle Navigation">
+        <i class="fas fa-bars"></i>
+      </button>
 
       <nav>
         <ul>
@@ -75,97 +110,171 @@
               href="#"
               class="dropdown-toggle"
               data-bs-toggle="dropdown"
-              aria-expanded="false"
-              >Acerca de</a
-            >
+              aria-expanded="false">
+              Acerca de
+            </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Nuestra Historia</a></li>
               <li>
-                <a class="dropdown-item" href="EquipoClaritymental.html"
-                  >Nuestro Equipo</a
-                >
+                <a class="dropdown-item" href="EquipoClaritymental.html">
+                  Nuestro Equipo
+                </a>
               </li>
             </ul>
           </li>
           <li><a href="servicios.html">Servicios</a></li>
-          <li><a href="#">Informacion</a></li>
-          <li><a href="#">Contacto</a></li>
+          <li><a href="Informacion.html">Información</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </nav>
+
+      <div class="nav-buttons">
+        <button class="init" onclick="showLoader()">Iniciar Sesión</button>
+
+        <button
+          class="Register"
+          onclick="window.location.href='./register.html';">
+          Registrarse
+        </button>
+      </div>
     </header>
 
-    <section class="section-content">
-      <header class="especial">
-        <h1 class="title">Somos Especialistas</h1>
-        <p class="descripcion">
-          La primera Organización especializada en el Perú, orientada en tratar
-          problemas clínicos y preventivos en Salud Mental con el enfoque
-          cognitivo conductual.
-        </p>
-      </header>
-      <div class="oficina-img">
-        <img
-          class="oficina-img__image"
-          src="Assets/img/Oficina-sede.jpg"
-          alt="Oficina Sede" />
+<!-- Cabecera de la sección (no la del menú) -->
+<section class="section-header">
+  <div class="header-content">
+    <h1>Tratamiento para <span class="highlight-text">Ansiedad, Depresión y Problemas Emocionales</span></h1>
+    <h2>Somos Especialistas</h2>
+  </div>
+</section>
+      <!-- Slider de Partners -->
+      <section class="partners-section">
+        <div class="partners-container">
+          <h2>Colaboradores y <span>Clientes</span></h2>
+          <div class="partners-slider">
+            <div class="slider-track">
+              <img src="Assets/img/Black and Green Typographical Green Energy Logo.png" alt="Primax">
+              <img src="Assets/img/2.png" alt="Intercorp">
+              <img src="Assets/img/uBOb7vMM_400x400.jpg" alt="Cliente 3">
+              <img src="Assets/img/AUNA_0-min.jpeg" alt="AUNA">
+            </div>
+          </div>
+          <div class="slider-buttons">
+            <span class="dot active-partner" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+          </div>
+        </div>
+      </section>
+
+<!-- Descripción sobre los especialistas -->
+<div class="descripcion">
+  <p>SOMOS la primera Organización especializada en el Perú, orientada a tratar problemas clínicos y preventivos en Salud Mental con el enfoque cognitivo conductual. Bajo un staff de especialistas, con experiencia en todos los casos señalados más abajo, les damos la bienvenida al mejor servicio con precios accesibles para todos.</p>
+</div>
+<!-- Lista de servicios -->
+<section class="servicios">
+  <div class="container">
+    <!-- Tarjeta 1: Especialidades Preventivas -->
+    <div class="card">
+      <img src="/Assets/img/Persona que realiza terapia de psicólogo en línea_ _ Foto Premium.jpeg" alt="Especialidades Preventivas">
+      <div class="card-content">
+        <h2>Especialidades Preventivas</h2>
+        <p>No esperes a estar mal. La ansiedad, depresión y problemas emocionales se generan, en la vida misma, con pequeños traumitas que a la larga se van haciendo una bola de nieve más grande. Evitemos eso y cortemos el problema de raíz.</p>
+        <ul>
+          <li><a href="#">Terapia para adolescentes y jovenes</a></li>
+          <li><a href="#">Problemas de la vida cotidiana</a></li>
+          <li><a href="#">Duelo por fallecimiento</a></li>
+          <li><a href="#">Estrés laboral</a></li>
+        </ul>
       </div>
-    </section>
+    </div>
 
-    <section class="section">
-      <h2 class="titulo-seccion">Lista de Servicios</h2>
-      <ul class="lista-servicios">
-        <li><a href="#">Terapia de pareja</a></li>
-        <li><a href="#">Terapia de familia</a></li>
-        <li><a href="#">Terapia para niños y adolescentes</a></li>
-        <li><a href="#">Problemas de la vida cotidiana</a></li>
-        <li><a href="#">Duelo por fallecimiento</a></li>
-        <li><a href="#">Estrés laboral</a></li>
-        <li><a href="#">Estrés</a></li>
-      </ul>
-    </section>
+    <!-- Tarjeta 2: Especialidades Clínicas -->
+    <div class="card">
+      <img src="Assets/img/Teoría del aprendizaje invisible _ Euroinnova.jpeg" alt="Especialidades Clínicas">
+      <div class="card-content">
+        <h2>Especialidades Clínicas</h2>
+        <p>Una situación delicada si no tratamos de frenarla; la ansiedad, depresión y problemas emocionales tienen un origen, pero también un entendimiento. Descubramos juntos cómo estar tranquilos y podamos disfrutar de esta vida.</p>
+        <ul>
+          <li><a href="#">Trastornos de ansiedad</a></li>
+          <li><a href="#">¿Qué son los trastornos de ansiedad?</a></li>
+          <li><a href="#">Trastorno de Pánico y Agorafobia</a></li>
+          <li><a href="#">Trastorno de Ansiedad Generalizada (TAG)</a></li>
+          <li><a href="#">Depresión</a></li>
+          <li><a href="#">Trastorno depresivo grave</a></li>
+          
+          <li><a href="#">Depresión posparto</a></li>
+          <li><a href="#">Trastorno afectivo estacional</a></li>
 
-    <section class="section">
-      <h2 class="titulo-seccion">Especialidades Preventivas</h2>
-      <p class="descripcion">
-        No esperes a estar mal. La ansiedad, depresión y problemas emocionales
-        se generan, en la vida misma, con pequeños traumitas que a la larga se
-        van haciendo una bola de nieve más grande. Evitemos eso y cortemos el
-        problema de raíz.
-      </p>
-    </section>
+          <li><a href="#">Trastorno bipolar</a></li>
+          <li><a href="#">Control de la conducta</a></li>
 
-    <section class="section">
-      <h2 class="titulo-seccion">Especialidades Clínicas</h2>
-      <p class="descripcion">
-        Con Conciencia y Voluntad. Una situación delicada si no tratamos de
-        frenarla; la ansiedad, depresión y problemas emocionales tienen un
-        origen, pero también un entendimiento. Descubramos juntos cómo estar
-        tranquilos y disfrutar de esta vida.
-      </p>
-      <ul class="lista-servicios">
-        <li><a href="#">Trastornos de ansiedad</a></li>
-        <li><a href="#">Trastorno de Pánico y Agorafobia</a></li>
-        <li><a href="#">Fobia social y fobia específica</a></li>
-        <li><a href="#">Trastorno de Ansiedad Generalizada (TAG)</a></li>
-        <li><a href="#">Depresión</a></li>
-        <li><a href="#">Trastorno depresivo grave</a></li>
-        <li><a href="#">Trastorno distímico</a></li>
-        <li><a href="#">Depresión posparto</a></li>
-        <li><a href="#">Trastorno afectivo estacional</a></li>
-        <li><a href="#">Trauma por abusos y accidentes</a></li>
-        <li><a href="#">Trastorno obsesivo compulsivo</a></li>
-        <li><a href="#">Trastorno bipolar</a></li>
-        <li><a href="#">Control de la conducta</a></li>
-        <li><a href="#">Trastorno de límite de personalidad</a></li>
-      </ul>
-    </section>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <footer class="pie-pagina">
-      <p>&copy; 2024 Somos Especialistas - Todos los derechos reservados</p>
-    </footer>
+    
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src=""></script>
+    <footer class="footer">
+      <div class="footer-container">
+          <!-- Logo del footer -->
+          <div class="footer-logo">
+              <img src="Assets/img/LOGO-removebg-preview (1).png" alt="Clarity Mental Logo" />
+              <p>Clarity Mental</p>
+          </div>
+          
+          <!-- Enlaces principales -->
+          <div class="footer-links">
+              <h4>Enlaces</h4>
+              <ul>
+                  <li><a href="#">Inicio</a></li>
+                  <li><a href="#">Servicios</a></li>
+                  <li><a href="#">Sobre nosotros</a></li>
+                  <li><a href="#">Contacto</a></li>
+              </ul>
+          </div>
+          
+          <!-- Información de contacto -->
+          <div class="footer-contact">
+              <h4>Contacto</h4>
+              <ul>
+                  <li><a href="mailto:contacto@claritymental.org">contacto@claritymental.org</a></li>
+                  <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                  <li><p>Atención virtual vía Zoom</p></li>
+              </ul>
+          </div>
+  
+          <!-- Redes sociales -->
+          <div class="footer-social">
+              <h4>Síguenos</h4>
+              <ul>
+                  <li><a href="#" class="social-icon"><i class="fab fa-facebook"></i></a></li>
+                  <li><a href="#" class="social-icon"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#" class="social-icon"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a></li>
+              </ul>
+          </div>
+      </div>
+         <!-- Pie de página -->
+  <div class="footer-bottom">
+    <p>&copy; 2024 Clarity Mental. Todos los derechos reservados.</p>
+</div>
+  </footer>
+
   </body>
+  </html>
+  
+
+  <script src="Assets/js/modal.js">
+
+  </script>
+  <script src="Assets/js/opinions.js">
+
+  </script>
 </html>
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-..."
+crossorigin="anonymous"></script>

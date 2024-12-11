@@ -1,15 +1,23 @@
-/* Variables de color */
+/* Variables de colores */
 :root {
-  --main-color: #5d9aa4; /* Azul verde suave */
+  --main-color: #333; /* Azul verde suave */
   --secondary-color: #f0f0f0; /* Lila pastel */
-  --accent-color: #88b04b; /* Verde calmante */
+  --accent-color: #2c3e50; /* Verde calmante */
   --text-color: #2f3e46; /* Gris oscuro */
   --background-color: #f7f7f7; /* Fondo gris claro */
+  --background-gradient: linear-gradient(
+    135deg,
+    #e0f7fa 0%,
+    #e8f5e9 100%
+  ); /* Degradado suave */
 }
+
+/* Estilo general */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
 
 a {
@@ -19,27 +27,34 @@ a {
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5 {
   margin: 0;
 }
 
 /* Barra Superior */
 .top-bar {
   background-color: #5d9aa4;
-  color: #fff;
+  color: white;
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding: 10px 20px;
   font-size: 14px;
 }
 
 .top-bar .contact-info span,
 .top-bar .social-icons a {
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 .top-bar .social-icons a {
-  color: #fff;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.top-bar .social-icons a:hover {
+  color: var(--accent-color);
 }
 
 /* Encabezado Principal */
@@ -50,6 +65,7 @@ header {
   padding: 15px 20px;
   background-color: #f4f4f9; /* Fondo suave */
   border-bottom: 2px solid #3a3a3a; /* Color del borde inferior */
+  gap: 20px;
 }
 
 /* Logo */
@@ -71,217 +87,760 @@ header .logo .title {
   font-weight: bold;
   color: #333; /* Color del título del logo */
 }
-/* Navegación */
+
+/* Menú de navegación */
 header nav {
   display: flex;
-  align-items: center;
 }
 
 header nav ul {
   list-style: none;
+  display: flex;
+  gap: 15px;
   margin: 0;
   padding: 0;
-  display: flex;
+}
+
+/* Cuando el menú se activa con la clase 'active' */
+header nav.active {
+  display: block; /* Mostrar el menú */
+  transform: translateY(
+    0
+  ); /* Mover el menú hacia abajo desde fuera de la pantalla */
 }
 
 header nav ul li {
-  margin-left: 20px;
+  position: relative;
 }
 
 header nav ul li a {
-  color: #3a3a3a;
-  font-weight: bold;
-  padding: 10px 20px;
-  border: 2px solid #3a3a3a;
+  font-size: 1rem;
+  padding: 8px 15px;
+  border: 2px solid var(--main-color);
   border-radius: 20px;
-  text-decoration: none;
+  font-weight: bold;
+
+  color: var(--text-color);
   transition: all 0.3s ease;
+}
+/* Eliminar subrayado de los enlaces en el menú */
+nav ul li a {
+  text-decoration: none; /* Elimina la subrayado */
 }
 
 header nav ul li a:hover {
-  background-color: #3a3a3a;
-  color: #fff;
+  background-color: var(--main-color);
+  color: white;
 }
 
-header nav ul li a.active {
-  background-color: #3a3a3a;
-  color: #fff;
-}
-.dropdown-menu {
-  background-color: #fff; /* Fondo blanco */
-  border: 1px solid #ddd; /* Borde gris claro */
-  border-radius: 5px; /* Esquinas redondeadas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
-  opacity: initial; /* Inicialmente invisible */
+/* Botones adicionales */
+.nav-buttons {
+  display: flex;
+  gap: 10px;
 }
 
-/* Mostrar el dropdown cuando está activo */
-.dropdown.show .dropdown-menu {
-  opacity: 1; /* Hacerlo visible */
-  transform: translateY(0); /* Regresar a su posición original */
-}
-/* Estilo de los elementos dentro del dropdown */
-.dropdown-item {
-  padding: 10px 20px; /* Espaciado dentro de los elementos */
-  color: #333; /* Color de texto */
-  transition: background-color 0.2s; /* Transición para el fondo */
-}
-
-/* Efecto al pasar el ratón por encima */
-.dropdown-item:hover {
-  background-color: #f1f1f1; /* Fondo claro al pasar el ratón */
-}
-
-/* Estilo de la sección de especialistas */
-.section-content {
-  background-color: #fff;
-  padding: 60px 30px;
-  text-align: center;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-  margin-bottom: 60px;
-}
-
-.especial {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.especial .title {
-  font-size: 2.5rem;
-  color: var(--main-color);
-  margin-bottom: 20px;
-}
-
-.especial .descripcion {
-  font-size: 1.2rem;
-  color: var(--text-color);
-  margin-bottom: 20px;
-  line-height: 1.5;
-}
-
-.oficina-img {
-  margin-top: 30px;
-}
-
-.oficina-img__image {
-  width: 100%;
-  max-width: 800px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Sección de lista de servicios */
-.section {
-  padding: 60px 30px;
-  text-align: center;
-  background-color: var(--secondary-color);
-}
-
-.titulo-seccion {
-  font-size: 2rem;
-  color: var(--main-color);
-  margin-bottom: 20px;
-}
-
-.lista-servicios {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.lista-servicios li {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.nav-buttons button {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: var(--accent-color);
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.lista-servicios li a {
-  text-decoration: none;
-  color: var(--main-color);
-  font-size: 1.1rem;
-}
-
-.lista-servicios li:hover {
+.nav-buttons button:hover {
   background-color: var(--main-color);
-  color: #fff;
 }
 
-.lista-servicios li:hover a {
-  color: #fff;
+/* Estilo del dropdown */
+.dropdown-menu {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none; /* Inicialmente oculto */
+  z-index: 10px;
 }
 
-/* Sección de descripciones de especialidades */
-.descripcion {
-  font-size: 1.1rem;
+/* Cuando el dropdown tiene la clase 'show' se despliega */
+.dropdown.show .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+}
+/* Íconos sociales, inicialmente ocultos */
+header .social-iconses {
+  display: none; /* Los ocultamos por defecto */
+  gap: 15px; /* Espaciado entre íconos */
+}
+header .social-icons a:hover {
+  color: var(--accent-color);
+}
+
+.dropdown-menu li a {
   color: var(--text-color);
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+  background-color: var(--hover-color);
+  color: white;
+}
+
+/* Menú hamburguesa alineado a la derecha */
+header .menu-toggle {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--main-color);
+  display: none; /* Escondemos el toggle por defecto */
+  position: relative;
+  top: -20px; /* Posición inicial fuera de la vista */
+  opacity: 0; /* Inicia con opacidad 0 para la animación */
+  transition: all 0.5s ease; /* Animación suave para la transformación */
+}
+/* Animación para el toggle de menú */
+@keyframes slideIn {
+  0% {
+    opacity: 0; /* Comienza invisible */
+    transform: translateY(-20px); /* Comienza desplazado hacia arriba */
+  }
+  100% {
+    opacity: 1; /* Termina visible */
+    transform: translateY(0); /* Termina en su posición normal */
+  }
+}
+/* Responsividad */
+@media (max-width: 768px) {
+  header nav ul li a {
+    padding: 10px 20px;
+    border: none;
+    border-radius: none;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background-color: none;
+  }
+  header {
+    flex-direction: row; /* Mantener en línea los elementos */
+    justify-content: space-between; /* Separar el logo y los botones */
+    border-radius: none;
+    border-bottom: none; /* Color del borde inferior */
+    box-shadow: none;
+  }
+
+  /* Mostrar los íconos sociales solo en pantallas pequeñas */
+  header .social-iconses {
+    display: flex; /* Hacerlos visibles */
+    justify-content: center; /* Centrar los íconos */
+    gap: 20px; /* Espacio entre los íconos */
+    position: static; /* Desactivar el posicionamiento absoluto */
+  }
+
+  /* Ajustar el tamaño de los íconos en modo responsivo */
+  header .social-iconses a {
+    font-size: 22px; /* Ajustar el tamaño si es necesario */
+  }
+
+  header .logo {
+    justify-content: center;
+    gap: 15px; /* Espacio entre íconos y título */
+  }
+
+  header .social-icons {
+    display: flex; /* Mostrar íconos */
+    gap: 10px;
+    justify-content: center;
+  }
+  header nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  /* Diseño del menú de navegación */
+  header nav ul li {
+    width: 100%;
+    margin: 5px 0; /* Espaciado entre los elementos de la lista */
+    padding: 10px; /* Padding interno para dar espacio alrededor del texto */
+    border-radius: 8px; /* Bordes redondeados para un aspecto más suave */
+    background-color: transparent;
+  }
+  header nav ul li:hover {
+    background-color: #5d9aa4;
+    transform: translateY(-3px); /* Efecto de desplazamiento hacia arriba */
+  }
+
+  /* Mostrar el menú cuando se activa el botón */
+  header nav.active ul {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    margin-right: 35vh;
+    gap: 20px;
+    border: none;
+    border-radius: none;
+  }
+  /* Mostrar el menú toggle solo en pantallas pequeñas */
+  header .menu-toggle {
+    display: block; /* Mostrar el toggle solo en pantallas pequeñas */
+    top: 0; /* Regresar a la posición normal */
+    opacity: 1; /* Hacerlo visible */
+    transform: translateY(20px); /* Iniciar desde abajo */
+  }
+  /* Animación para el menú hamburguesa */
+  header .menu-toggle {
+    animation: slideIn 0.5s ease-out forwards; /* Llamamos a la animación de deslizamiento */
+  }
+  /* Animación para el toggle de menú */
+  @keyframes slideIn {
+    0% {
+      opacity: 0; /* Comienza invisible */
+      transform: translateY(-20px); /* Comienza desplazado hacia arriba */
+    }
+    100% {
+      opacity: 1; /* Termina visible */
+      transform: translateY(0); /* Termina en su posición normal */
+    }
+  }
+}
+/* Inicialmente ocultar los dropdowns en pantallas pequeñas */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    display: none !important; /* Desactivar dropdowns en dispositivos móviles */
+  }
+}
+
+/* Ajustes responsivos para botones en pantallas pequeñas */
+@media (max-width: 768px) {
+  header .init,
+  header .Register {
+    padding: 8px 15px; /* Tamaño más pequeño en pantallas reducidas */
+    font-size: 0.9rem; /* Reducir el tamaño del texto */
+  }
+}
+/* Contenedor de los botones */
+header nav .nav-buttons {
+  display: flex; /* Uso de flexbox para alinear los botones */
+  margin-left: 20px; /* Empujar botones hacia la derecha */
+  gap: 10px; /* Separación entre botones */
+  border: none;
+}
+/* Botones de sesión y registro */
+header .init,
+header .Register {
+  color: #fff; /* Texto blanco */
+  padding: 10px 20px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 25px; /* Bordes redondeados */
+  font-size: 1rem; /* Tamaño de texto */
+  font-weight: bold; /* Texto en negrita */
+  cursor: pointer; /* Mostrar cursor de mano */
+  transition: all 0.3s ease; /* Transición suave para hover */
+}
+
+header .init {
+  background-color: #5d9aa4; /* Fondo azul turquesa */
+  box-shadow: 0 4px 8px rgba(93, 154, 164, 0.3); /* Sombra sutil */
+}
+
+header .init:hover {
+  background-color: #468b92; /* Oscurecer al pasar el ratón */
+  transform: scale(1.05); /* Ligeramente más grande */
+}
+
+header .Register {
+  background-color: #2c3e50; /* Fondo azul oscuro */
+  box-shadow: 0 4px 8px rgba(44, 62, 80, 0.3); /* Sombra sutil */
+}
+
+header .Register:hover {
+  background-color: #1a252f; /* Oscurecer al pasar el ratón */
+  transform: scale(1.05); /* Ligeramente más grande */
+}
+/* Ocultar la barra superior en modo responsivo */
+@media (max-width: 768px) {
+  .top-bar {
+    display: none;
+  }
+}
+/* Íconos sociales en el header (solo en modo responsivo) */
+@media (max-width: 768px) {
+  header .social-icons {
+    display: flex;
+    gap: 10px;
+    margin-left: 10px;
+  }
+
+  .social-icons a {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+
+  .social-icons a:hover {
+    color: var(--main-color);
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: none;
+    box-shadow: none;
+  }
+  header nav ul li a:hover {
+    background-color: transparent;
+    color: white;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-buttons {
+    margin-top: 15px;
+  }
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Estilos globales */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* Estilo de la cabecera de la sección (no afectará al header del menú) */
+.section-header {
+  background-color: #16a085; /* Un verde oscuro para el fondo */
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  background-image: url("/Assets/img/How\ to\ conduct\ a\ great\ podcast\ interview.jpeg"); /* Fondo con imagen */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.section-header .header-content {
+  position: relative;
+  z-index: 2; /* Para que el texto se sobreponga al fondo */
+}
+
+.section-header h1 {
+  font-size: 2.8em;
+  margin: 0;
+}
+
+.section-header h1 .highlight-text {
+  color: #ffeb3b; /* Color amarillo */
+  font-weight: bold;
+}
+
+.section-header h2 {
+  font-size: 1.5em;
+  margin-top: 10px;
+  font-weight: lighter;
+}
+
+/* Estilo de la descripción sobre los especialistas */
+.descripcion {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  width: 80%;
   max-width: 900px;
-  margin: 20px auto;
+  border-radius: 8px;
+  font-size: 1.2em;
+  color: #333;
   line-height: 1.6;
 }
 
+.descripcion p {
+  margin-bottom: 0;
+}
+
+.descripcion a {
+  color: #16a085;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.descripcion a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .section-header h1 {
+    font-size: 2em;
+  }
+
+  .section-header h2 {
+    font-size: 1.3em;
+  }
+
+  .descripcion {
+    width: 90%;
+  }
+}
+
+/* Diseño global */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* Sección de servicios */
+.servicios {
+  padding: 50px 20px;
+  background-color: #f5f5f5;
+}
+
+/* Contenedor de tarjetas */
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas se acomoden en nuevas filas si es necesario */
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Tarjetas */
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 48%; /* Hace que las tarjetas ocupen el 48% del ancho del contenedor, dejando espacio entre ellas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h2 {
+  font-size: 1.8em;
+  color: #16a085; /* Color verde para el título */
+  margin-bottom: 20px;
+}
+
+.card-content p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.card-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card-content ul li {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.card-content ul li::before {
+  content: "➤";
+  margin-right: 10px;
+  color: #16a085;
+}
+
+.card-content ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.card-content ul li a:hover {
+  color: #16a085; /* Color verde al pasar el ratón */
+}
+
+/* Responsividad: en pantallas pequeñas, las tarjetas ocupan todo el ancho */
+@media (max-width: 768px) {
+  .card {
+    width: 100%; /* En pantallas pequeñas las tarjetas ocuparán el 100% del ancho */
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Estilo general para el footer */
+.footer {
+  background-color: #2d3b40; /* Fondo oscuro */
+  color: #ffffff; /* Texto blanco */
+  width: 100.3%; /* Asegura que el footer ocupe todo el ancho */
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  flex-direction: column; /* Cambia la dirección del contenido a columna */
+  padding: 10px 5px; /* Espaciado dentro del footer */
+  box-sizing: border-box;
+  margin-left: -6px;
+}
+/* Contenedor de las secciones dentro del footer */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Cuatro columnas iguales */
+  gap: 40px; /* Espacio entre las columnas */
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 20px; /* Centrado del contenedor */
+  text-align: center;
+}
+/* Logo del footer */
+.footer-logo img {
+  width: 140px; /* Ancho del logo */
+}
+
+/* Títulos de las secciones del footer */
+.footer-logo p,
+.footer-links a,
+.footer-contact a,
+.footer-social a {
+  font-size: 1.1rem;
+  color: #e1e7ee; /* Color de texto más suave */
+  text-decoration: none; /* Elimina subrayado de los enlaces */
+  transition: color 0.3s ease; /* Transición suave para el hover */
+}
+
+/* Títulos de las secciones (Enlaces, Contacto, Redes) */
+.footer-links h4,
+.footer-contact h4,
+.footer-social h4 {
+  font-size: 1.2rem;
+  color: #36b2a6; /* Verde turquesa para los títulos */
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Listas dentro de las secciones */
+.footer-links ul,
+.footer-contact ul,
+.footer-social ul {
+  list-style: none; /* Elimina los puntos de las listas */
+  padding: 0;
+}
+
+/* Espaciado entre los elementos de la lista */
+.footer-links li,
+.footer-contact li {
+  margin-bottom: 12px; /* Espacio entre cada ítem */
+}
+
+/* Hover de los enlaces */
+.footer-links a:hover,
+.footer-contact a:hover,
+.footer-social a:hover {
+  color: #36b2a6; /* Verde turquesa en hover */
+}
+
+/* Estilo para las redes sociales */
+.footer-social ul {
+  display: flex;
+  justify-content: center;
+  gap: 25px; /* Espacio entre los íconos */
+}
+
+.footer-social a {
+  font-size: 1.5rem; /* Tamaño adecuado para los íconos */
+  color: #e1e7ee; /* Color claro para los íconos */
+  transition: color 0.3s ease; /* Transición para el hover */
+}
+
+/* Hover en los íconos de redes sociales */
+.footer-social a:hover {
+  color: #36b2a6; /* Verde turquesa en hover */
+}
+
 /* Pie de página */
-.pie-pagina {
-  background-color: var(--main-color);
-  color: white;
+.footer-bottom {
+  width: 100%;
+  background-color: #2d3b40;
+  color: #e1e7ee;
   text-align: center;
   padding: 20px;
-  margin-top: 40px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  border-top: 1px solid #36b2a6;
+  margin-top: 20px; /* Asegura que se separe del contenido del footer */
+  height: 50px;
 }
 
-.pie-pagina p {
-  font-size: 1rem;
-  margin: 0;
-}
-/* Estilos adicionales para agrandar las secciones */
-.service-box {
-  padding: 2rem;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  margin-bottom: 2rem;
-  background-color: #f8f9fa;
-}
-.service-box img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 1rem;
-}
-.collaborators-section {
-  margin-top: 3rem;
-  padding: 2rem;
-  background-color: #e9ecef;
-  border-radius: 10px;
-}
-.collaborators-logos img {
-  max-width: 100px;
-  margin: 0.5rem;
-}
-.large-text {
-  font-size: 1.2rem;
-}
-
-/* Media Queries */
+/* Responsividad: Para pantallas pequeñas */
 @media (max-width: 768px) {
-  .lista-servicios {
-    grid-template-columns: 1fr 1fr;
+  .footer-container {
+    grid-template-columns: 1fr 1fr; /* Solo dos columnas en pantallas más pequeñas */
   }
 }
 
-@media (max-width: 480px) {
-  .lista-servicios {
-    grid-template-columns: 1fr;
-  }
-  .titulo-seccion {
-    font-size: 1.8rem;
-  }
-  .especial .title {
-    font-size: 2rem;
-  }
+/* Elimina los márgenes y padding predeterminados de los elementos */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo de los enlaces de los elementos de la lista */
+.footer-links a,
+.footer-contact a {
+  color: inherit; /* Hereda el color del elemento padre */
+  font-weight: 300;
+  text-decoration: none; /* Elimina subrayado */
+}
+
+/* Agregar margen superior al footer */
+.footer {
+  margin-top: 100px; /* Evita que se pegue al contenido superior */
+}
+
+/* Estilo general para la sección */
+
+.partners-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+  text-align: center;
+  font-family: "Arial", sans-serif;
+}
+
+/* Título de la sección */
+.partners-section h2 {
+  font-size: 32px;
+  color: #4d87b0; /* Azul suave */
+  margin-bottom: 45px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Subtítulo con color destacado */
+.partners-section h2 span {
+  color: #00bfae; /* Verde menta suave */
+}
+
+/* Contenedor del slider */
+.partners-slider {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+}
+
+/* Contenedor de las imágenes */
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Efecto suave al cambiar las imágenes */
+}
+
+/* Estilo para las imágenes dentro del carrusel */
+.slider-track img {
+  width: 21%; /* Ajustamos el tamaño a 18% para hacerlas más pequeñas */
+  margin-right: 20px; /* Espacio entre las imágenes */
+  height: auto;
+  border-radius: 8px; /* Bordes redondeados */
+  opacity: 0.9;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Hover en imágenes para resaltar */
+.slider-track img:hover {
+  opacity: 1;
+}
+
+/* Estilo para los botones de navegación */
+.pagination {
+  margin-top: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center; /* Centra los botones */
+  align-items: center;
+}
+
+/* Estilo de cada punto de navegación */
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 22px 12px;
+  background-color: #b1d4e0; /* Gris claro */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Puntos activos */
+.dot.active {
+  background-color: #00bfae; /* Verde menta para el punto activo */
+}
+
+/* Efecto de hover en puntos */
+.dot:hover {
+  background-color: #4d87b0; /* Azul suave para hover */
+}
+
+/* Respuesta visual de los botones cuando se pasan por encima */
+.dot:hover,
+.dot.active {
+  transform: scale(1.1);
+}
+
+/* Efecto de hover en puntos */
+.dot:hover {
+  background-color: #4d87b0; /* Azul suave para hover */
+}
+
+/* Respuesta visual de los botones cuando se pasan por encima */
+.dot:hover,
+.dot.active {
+  transform: scale(1.1);
 }

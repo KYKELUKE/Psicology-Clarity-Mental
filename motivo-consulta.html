@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Motivo de Consulta</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #fff8f0; /* Fondo color crema cálido */
+        color: #4a4a4a; /* Texto gris oscuro suave */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      h1 {
+        color: #16a085; /* Coral para un toque cálido y claro */
+        margin-bottom: 20px;
+      }
+      label {
+        font-size: 16px;
+        color: #34495e; /* Naranja pastel suave */
+        margin-bottom: 10px;
+        display: block;
+      }
+      input[type="text"] {
+        width: 100%;
+        max-width: 400px;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ffccb3; /* Naranja muy suave */
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+        background-color: #fffaf2; /* Fondo claro cálido */
+      }
+      button {
+        margin-top: 20px;
+        background-color: #34495e; /* Naranja pastel */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      button:hover {
+        background-color: #16a085; /* Coral más intenso al pasar el ratón */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Motivo de Consulta</h1>
+    <label for="motivo">Por favor, escribe el motivo de tu consulta:</label>
+    <input
+      type="text"
+      id="motivo"
+      name="motivo"
+      placeholder="Escribe aquí tu motivo" />
+    <button onclick="window.location.href='/checkout.html';">Enviar</button>
+  </body>
+</html>

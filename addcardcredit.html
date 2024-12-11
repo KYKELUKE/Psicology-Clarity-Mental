@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agregar Tarjeta</title>
+    <style>
+      /* Estilos globales */
+      body {
+        display: flex;
+        font-family: "Arial", sans-serif;
+        background-color: #f4f7fa;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .add-card-container {
+        max-width: 1000px;
+        margin: 50px auto;
+        padding: 80px;
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        justify-content: center;
+      }
+
+      .add-card-container h2 {
+        font-size: 24px;
+        color: #00796b;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        font-size: 16px;
+        margin-bottom: 5px;
+        color: #00796b;
+      }
+
+      input {
+        padding: 12px;
+        font-size: 16px;
+        border: 2px solid #00796b;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        outline: none;
+        width: 100%;
+        background-color: #f9f9f9;
+      }
+
+      input:focus {
+        border-color: #004d40;
+      }
+
+      button {
+        padding: 12px;
+        font-size: 18px;
+        background-color: #00796b;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 100%;
+      }
+
+      button:hover {
+        background-color: #004d40;
+      }
+
+      button:active {
+        background-color: #003b33;
+      }
+
+      /* Loader */
+      .loader {
+        display: none;
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #00796b;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 2s linear infinite;
+        margin: 20px auto;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="add-card-container">
+      <h2>Agregar Detalles de la Tarjeta</h2>
+      <form id="card-form">
+        <label for="card-number">Número de tarjeta</label>
+        <input
+          type="text"
+          id="card-number"
+          name="card-number"
+          placeholder="1234 5678 9012 3456"
+          required />
+
+        <label for="expiry-date">Fecha de expiración</label>
+        <input
+          type="text"
+          id="expiry-date"
+          name="expiry-date"
+          placeholder="MM/AA"
+          required />
+
+        <label for="card-holder">Titular de la tarjeta</label>
+        <input
+          type="text"
+          id="card-holder"
+          name="card-holder"
+          placeholder="Nombre del titular"
+          required />
+
+        <label for="cvv">Código de seguridad (CVV)</label>
+        <input type="text" id="cvv" name="cvv" placeholder="123" required />
+
+        <button type="submit">Guardar</button>
+        <!-- Loader que aparece al hacer submit -->
+        <div class="loader" id="loader"></div>
+      </form>
+    </div>
+
+    <script>
+      // Capturamos el formulario y el loader
+      const form = document.getElementById("card-form");
+      const loader = document.getElementById("loader");
+
+      // Acción al enviar el formulario
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Evitamos que el formulario se envíe de manera tradicional
+
+        const cardNumber = document.getElementById("card-number").value;
+
+        // Mostrar el loader mientras se simula la validación de la tarjeta
+        loader.style.display = "block";
+
+        setTimeout(function () {
+          // Validación simple: comprobamos que el número de tarjeta tenga exactamente 16 dígitos
+          if (cardNumber.replace(/\s+/g, "").length === 16) {
+            // Eliminamos espacios antes de contar los dígitos
+            localStorage.setItem("cardNumber", cardNumber); // Guardamos el número de tarjeta en el localStorage
+
+            // Redirigimos al checkout
+            window.location.href = "checkout.html";
+          } else {
+            alert("Número de tarjeta inválido. Por favor, verifica los datos.");
+            loader.style.display = "none"; // Ocultamos el loader si la validación falla
+          }
+        }, 2000); // Simulamos un tiempo de espera de 2 segundos para la validación
+      });
+    </script>
+  </body>
+</html>
