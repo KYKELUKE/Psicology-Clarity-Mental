@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil - Carlos Eduardo González</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-..." />
+    <link rel="stylesheet" href="./Assets/css/psicology-profile.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+      <link
+      rel="stylesheet"
+      
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" /> 
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Barra Superior -->
+    <div class="top-bar">
+      <div class="contact-info">
+        <span>📞 (01) 4800 864</span>
+        <span
+          >✉️
+          <a href="mailto:contacto@bienestarpsicologico.com"
+            >contacto@bienestarpsicologico.com</a
+          ></span
+        >
+      </div>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <!-- Encabezado Principal -->
+    <header>
+    <div class="logo">
+      <img
+        src="Assets/img/LOGO-removebg-preview (1).png"
+        alt="Logo Clarity Mental" />
+      <h1 class="title">Clarity Mental</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="Inicio.html">Inicio</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Acerca de</a>
+
+          <ul class="dropdown-menu">
+            <li><a href="#">Nuestra Historia</a></li>
+            <li><a href="EquipoClaritymental.html">Nuestro Equipo</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Información</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="nav-buttons">
+      <button class="init">Iniciar Sesión</button>
+      <button
+        class="Register"
+        onclick="window.location.href='./register.html';">
+        Registrarse
+      </button>
+    </div>
+  </header>
+
+  <section class="profile-header">
+    <nav>
+      <ul>
+        <li><a href="#">Sobre mí</a></li>
+        <li><a href="#">Estilo de terapia</a></li>
+        <li><a href="#">Servicio</a></li>
+        <li><a href="#">Opiniones</a></li>
+      </ul>
+    </nav>
+  </section>
+  
+
+  <main>
+    <section class="profile-header">
+      <div class="profile-info">
+        <img
+          src="Assets/img/psicoterapeuta.jpeg"
+          alt="Foto de Carlos Eduardo González"
+          class="profile-pic" />
+        <h1>Carlos Eduardo González</h1>
+        <p>Psicólogos en línea • Colombia</p>
+        <span class="badge">Especialista destacado</span>
+        <p class="stats">
+          <strong>+250</strong> Citas en Selia •
+          <strong>5.0</strong> Satisfacción
+        </p>
+      </div>
+    </section>
+
+    <section class="profile-content">
+      <div class="about-section">
+        <h2>Sobre mí</h2>
+        <p>
+          Soy un psicólogo con una profunda pasión por ayudar a las personas...
+        </p>
+        <a href="#" class="read-more">Ver más</a>
+      </div>
+
+      <div class="session-section">
+        <h2>¿Qué esperar en la primera sesión?</h2>
+        <p>
+          El centro de la primera sesión es la valoración del motivo de
+          consulta...
+        </p>
+        <a href="#" class="read-more">Ver más</a>
+      </div>
+
+      <div class="therapy-style-section">
+        <h2>Estilo de terapia psicológica</h2>
+        <ul class="therapy-tags">
+          <li>Analítico</li>
+          <li>Compasivo</li>
+          <li>Abierto</li>
+        </ul>
+        <p>
+          Soy psicólogo clínico de orientación integrativa cognitivo
+          conductual...
+        </p>
+        <a href="#" class="read-more">Ver más</a>
+      </div>
+    </section>
+
+    <aside class="schedule-section">
+        <h2>Agenda tu cita con Carlos</h2>
+        <form>
+          <label for="service">Servicio</label>
+          <select id="service">
+            <option value="therapy">
+              Terapia individual • $140.000 COP • 55 min
+            </option>
+          </select>
+      
+          <div class="options">
+            <label>
+              <input type="radio" name="type" value="virtual" checked /> Virtual
+            </label>
+          </div>
+      
+          <div class="calendar">
+            <h3>Diciembre 2024</h3>
+            <div class="days">
+              <button type="button" class="calendar-day">Hoy</button>
+              <button type="button" class="calendar-day">Mié</button>
+              <button type="button" class="calendar-day">Jue</button>
+            </div>
+            <div class="times">
+              <button type="button" class="calendar-time">2:30 PM</button>
+              <button type="button" class="calendar-time">3:00 PM</button>
+              <button type="button" class="calendar-time">3:30 PM</button>
+            </div>
+          </div>
+        </form>
+      
+        <!-- Botón para agendar cita -->
+        <button class="schedule-btn agendarCitaBtn">Agendar cita</button>
+      
+        <!-- Modal de registro o inicio de sesión -->
+        <div class="loginModal">
+          <div class="modalContent">   
+                     <button class="cerrarModalBtn">
+                <i class="fas fa-times"></i> <!-- Icono de cerrar -->
+              </button>
+            <h2>Iniciar sesión o Registrarse</h2>
+            <p>Para agendar una cita, necesitas estar registrado. Si ya tienes cuenta, por favor inicia sesión.</p>
+            <!-- Botones para redirigir -->
+            <button class="modal-btn registrarseBtn">Registrarse</button>
+            <button class="modal-btn iniciarSesionBtn"
+            onclick="window.location.href='./iniciarsesion.html'">Iniciar sesión</button>
+
+              
+          </div>
+        </div>
+      </aside>
+      
+      </form>
+    </aside>
+  </main>
+  <script src="/Assets/js/modal-citas.js"></script>
+
+</html>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-..."
+  crossorigin="anonymous"></script>

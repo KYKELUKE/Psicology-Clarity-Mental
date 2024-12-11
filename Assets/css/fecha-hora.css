@@ -1,0 +1,179 @@
+/* General */
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9; /* Fondo de Clarity Mental */
+  color: #3a3a3a; /* Texto principal */
+}
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 28px;
+  color: #5d9aa4; /* Color principal de Clarity Mental */
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #666; /* Texto secundario */
+}
+
+/* Terapia Info */
+.therapy-info {
+  background: #eaf6f8; /* Fondo suave */
+  border: 1px solid #5d9aa4; /* Borde principal */
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.therapy-info p {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.therapy-info i {
+  color: #5d9aa4; /* Íconos */
+}
+
+/* Fecha */
+.date-container {
+  margin: 20px 0;
+}
+
+.date-container h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #5d9aa4; /* Títulos */
+}
+
+.dates-selection {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.date-btn {
+  background: #eaf6f8; /* Fondo botones */
+  color: #3a3a3a; /* Texto botones */
+  border: 1px solid #5d9aa4;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.date-btn:hover,
+.date-btn:focus {
+  background: #5d9aa4; /* Fondo al pasar el cursor */
+  color: #fff; /* Texto al pasar el cursor */
+}
+
+/* Horarios */
+.hours-selection {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 15px 0;
+}
+
+.hour-btn {
+  background: #ffffff;
+  color: #5d9aa4; /* Texto */
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.hour-btn:hover,
+.hour-btn:focus {
+  background: #f28a8a; /* Fondo hover */
+  color: #fff; /* Texto hover */
+}
+
+/* Botón principal */
+.btn {
+  display: inline-block;
+  background: #5d9aa4; /* Fondo principal */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background: #357abd; /* Fondo hover */
+}
+
+/* Horarios adicionales */
+.more-hours {
+  margin-top: 15px;
+  background: #f9f9f9;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 12px;
+  color: #888;
+}
+
+/* Botón de volver */
+.back-btn-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.back-btn {
+  color: #5d9aa4; /* Texto */
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

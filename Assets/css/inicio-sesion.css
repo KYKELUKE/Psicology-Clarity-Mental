@@ -199,3 +199,105 @@ footer a {
   color: #4a90e2;
   text-decoration: none;
 }
+
+/* Estilos del loader */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  border-radius: 10px;
+}
+
+/* Spinner (el círculo que gira) */
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db; /* Color azul para el spinner */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+/* Animación del spinner */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Estilos del modal */
+.modal {
+  display: none; /* Inicialmente oculto */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 30px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 10000;
+  text-align: center;
+  color: #333; /* Color oscuro para el texto */
+}
+
+/* Título del modal */
+.modal h3 {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #2c3e50; /* Color oscuro para el título */
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+/* Contenido del modal */
+.modal p {
+  color: #7f8c8d; /* Color gris para el texto del contenido */
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Botones dentro del modal */
+.modal button {
+  background-color: #3498db; /* Color azul para los botones */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s;
+}
+
+/* Efecto hover en los botones */
+.modal button:hover {
+  background-color: #2980b9; /* Color azul oscuro al hacer hover */
+}
+
+/* Cerrar el modal (X) */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+/* Cambiar el color al pasar el ratón por encima */
+.close:hover {
+  color: #e74c3c; /* Rojo para indicar que se puede cerrar */
+}

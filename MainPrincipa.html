@@ -1,29 +1,152 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi Dashboard</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet" />
     <link rel="stylesheet" href="Assets/css/Main.principal.css" />
+    <title>Dashboard Selia</title>
   </head>
   <body>
-    <header>
-      <div class="logo"></div>
-      <nav>
-        <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Productos</a></li>
-          <li><a href="#">Clientes</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <aside></aside>
-      <section class="contenido-principal">
-        <section class="estadisticas"></section>
-        <section class="tareas"></section>
-      </section>
-    </main>
-    <footer></footer>
+    <div class="dashboard">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo">
+          <h1>Clarity Mental</h1>
+        </div>
+        <nav class="menu">
+          <ul>
+            <li>
+              <a href="#" class="active"><i class="fas fa-home"></i> Inicio</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-calendar-alt"></i> Mis citas</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-user-heart"></i> Para ti</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-user-md"></i> Especialistas</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-comments"></i> Chats</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main content -->
+      <main class="main-content">
+        <!-- Header -->
+        <header class="dashboard-header">
+          <div class="welcome-text">
+            <h2>¡Hola Enrique!</h2>
+            <p>
+              Usa el código <strong>ANIMATE30</strong> para un 30% OFF en tu
+              primera sesión
+            </p>
+          </div>
+          <button class="cta-button">
+            <i class="fas fa-percentage"></i> Obtener descuento
+          </button>
+        </header>
+
+        <!-- Main sections -->
+        <div class="content-sections">
+          <!-- Cards -->
+          <section class="cards-section">
+            <h3 class="section-title">Acciones rápidas</h3>
+            <div class="cards">
+              <div class="card">
+                <i class="fas fa-calendar-plus"></i>
+                <p>Agendar</p>
+              </div>
+              <div class="card">
+                <i class="fas fa-search"></i>
+                <p>Búsqueda</p>
+              </div>
+              <div class="card">
+                <i class="fas fa-heartbeat"></i>
+                <p>Chequeo</p>
+              </div>
+              <div class="card">
+                <i class="fas fa-book"></i>
+                <p>Diario</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Diary -->
+          <section class="diary-section">
+            <h3 class="section-title">¿Cómo te sientes hoy?</h3>
+            <div class="emotions">
+              <div class="emoji">😊</div>
+              <div class="emoji">😐</div>
+              <div class="emoji">😔</div>
+            </div>
+          </section>
+
+          <!-- Recommendations -->
+          <section class="recommendations">
+            <div class="section-header">
+              <h3>Recomendado para ti</h3>
+              <a href="#" class="view-all">Ver todo</a>
+            </div>
+            <div class="card-grid">
+              <div class="card">
+                <img
+                  src="images/image1.jpg"
+                  alt="De regreso a la rutina"
+                  class="card-image" />
+                <div class="card-content">
+                  <h4 class="card-title">De regreso a la rutina...</h4>
+                  <p class="card-info">
+                    <i class="fas fa-blog"></i> Blog · 04:00 min
+                  </p>
+                  <p class="card-description">
+                    Entendiendo y superando la dificultad de regresar a la
+                    rutina.
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  src="images/image2.jpg"
+                  alt="¿Sientes que algo no está bien?"
+                  class="card-image" />
+                <div class="card-content">
+                  <h4 class="card-title">¿Sientes que algo no está bien?</h4>
+                  <p class="card-info">
+                    <i class="fas fa-blog"></i> Blog · 04:00 min
+                  </p>
+                  <p class="card-description">
+                    Descubre las cinco señales que podrían indicar que necesitas
+                    pedir ayuda.
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  src="images/image3.jpg"
+                  alt="Haz tus metas una realidad"
+                  class="card-image" />
+                <div class="card-content">
+                  <h4 class="card-title">Haz tus metas una realidad</h4>
+                  <p class="card-info">
+                    <i class="fas fa-tools"></i> Herramienta · 08:00 min
+                  </p>
+                  <p class="card-description">
+                    Transforma sueños en realidad: analiza y actúa para alcanzar
+                    tus metas.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
   </body>
 </html>

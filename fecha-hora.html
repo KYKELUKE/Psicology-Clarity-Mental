@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selecciona tu Terapia, Fecha y Hora</title>
+    <link rel="stylesheet" href="Assets/css/fecha-hora.css" />
+    <!-- Font Awesome para iconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Selecciona tu Fecha y Hora</h1>
+        <p class="subtitle">Elige la fecha y la hora que más te convenga.</p>
+      </header>
+
+      <section class="therapy-selection">
+        <div class="therapy-info">
+          <p><strong>Terapia Individual</strong></p>
+          <p><i class="fas fa-video"></i> Videollamada</p>
+          <p><i class="fas fa-clock"></i> Duración: 60 minutos</p>
+        </div>
+      </section>
+
+      <section class="date-time-selection">
+        <h3>Selecciona una Fecha y Hora</h3>
+        <p class="current-date">
+          Hoy: <span id="today-date" class="date-box"></span>
+        </p>
+
+        <div class="date-container">
+          <h2>Selecciona tu fecha</h2>
+          <div class="dates-selection">
+            <button class="date-btn" data-date="2024-12-12">Lun<br />12</button>
+            <button class="date-btn" data-date="2024-12-13">Mar<br />13</button>
+            <button class="date-btn" data-date="2024-12-14">Mié<br />14</button>
+            <button class="date-btn" data-date="2024-12-15">Jue<br />15</button>
+            <button class="date-btn" data-date="2024-12-16">Vie<br />16</button>
+            <button class="date-btn" data-date="2024-12-17">Sáb<br />17</button>
+            <button class="date-btn" data-date="2024-12-18">Dom<br />18</button>
+          </div>
+        </div>
+
+        <label for="hora">Selecciona una Hora:</label>
+        <div class="hours-selection">
+          <button class="hour-btn">10:00 AM</button>
+          <button class="hour-btn">12:00 PM</button>
+          <button class="hour-btn">2:00 PM</button>
+          <button class="hour-btn">4:00 PM</button>
+          <!-- Aquí se pueden añadir más horarios dinámicamente -->
+        </div>
+
+        <button type="button" class="btn" id="verMas">Ver más horarios</button>
+
+        <div id="more-hours-container" class="more-hours">
+          <!-- Aquí se agregarán los horarios adicionales -->
+        </div>
+      </section>
+
+      <button type="button" id="continuar-btn" class="btn" disabled>
+        Continuar
+      </button>
+
+      <div class="back-btn-container">
+        <a href="servicios.html" class="back-btn">Volver a los servicios</a>
+      </div>
+
+      <footer>
+        <p>Clarity Mental | Todos los derechos reservados</p>
+      </footer>
+    </div>
+
+    <script src="Assets/js/conditional.js"></script>
+  </body>
+</html>

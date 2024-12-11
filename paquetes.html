@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Servicios - Clarity Mental</title>
+    <link rel="stylesheet" href="Assets/css/paquetes.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Hero Section -->
+      <section class="hero">
+        <h1>Elige el servicio adecuado para ti</h1>
+        <p>Da el primer paso hacia tu bienestar emocional y mental.</p>
+      </section>
+
+      <!-- Servicios -->
+      <section class="services">
+        <!-- Terapia Individual -->
+        <div class="service-card">
+          <div class="service-info">
+            <h3>Terapia Individual</h3>
+            <p>
+              Recibe el acompañamiento necesario para conocerte mejor y trabajar
+              en tu bienestar emocional.
+            </p>
+            <div class="service-details">
+              <p>
+                <i class="fas fa-clock"></i> <strong>Duración:</strong> 60
+                minutos
+              </p>
+              <p>
+                <i class="fas fa-dollar-sign"></i> <strong>Precio:</strong> $80
+                USD
+              </p>
+            </div>
+            <label>
+              <input
+                type="checkbox"
+                name="service"
+                value="terapia-individual" />
+              Selecciona este servicio
+            </label>
+            <button class="btn" onclick="navigateToDateAndTime()">
+              Explorar Servicio
+            </button>
+          </div>
+        </div>
+
+        <!-- Terapia de Pareja -->
+        <div class="service-card">
+          <div class="service-info">
+            <h3>Terapia de Pareja</h3>
+            <p>
+              Fortalece la relación de pareja, mejorando la comunicación y
+              conexión en tu relación.
+            </p>
+            <div class="service-details">
+              <p>
+                <i class="fas fa-clock"></i> <strong>Duración:</strong> 90
+                minutos
+              </p>
+              <p>
+                <i class="fas fa-dollar-sign"></i> <strong>Precio:</strong> $120
+                USD
+              </p>
+            </div>
+            <label>
+              <input type="checkbox" name="service" value="terapia-pareja" />
+              Selecciona este servicio
+            </label>
+            <button class="btn" onclick="navigateToDateAndTime()">
+              Explorar Servicio
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Botón de salida -->
+      <div class="exit-btn-container">
+        <a href="index.html" class="exit-btn">Volver al inicio</a>
+      </div>
+
+      <!-- Footer -->
+      <footer>
+        <p>Clarity Mental | Todos los derechos reservados</p>
+      </footer>
+    </div>
+
+    <script>
+      // Función para navegar con animación a la página de fecha y hora
+      function navigateToDateAndTime() {
+        // Añadir la clase de animación para el desplazamiento
+        document.body.classList.add("slide-right");
+
+        // Esperar a que termine la animación antes de redirigir a la página de selección de fecha y hora
+        setTimeout(function () {
+          window.location.href = "/fecha-hora.html"; // La página de selección de fecha y hora
+        }, 1000); // 1000ms corresponde a la duración de la animación
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,692 @@
+/* Variables de colores */
+:root {
+  --main-color: #333; /* Azul verde suave */
+  --secondary-color: #f0f0f0; /* Lila pastel */
+  --accent-color: #2c3e50; /* Verde calmante */
+  --text-color: #2f3e46; /* Gris oscuro */
+  --background-color: #f7f7f7; /* Fondo gris claro */
+  --background-gradient: linear-gradient(
+    135deg,
+    #e0f7fa 0%,
+    #e8f5e9 100%
+  ); /* Degradado suave */
+}
+
+/* Estilo general */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+/* Barra Superior */
+.top-bar {
+  background-color: #5d9aa4;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.top-bar .contact-info span,
+.top-bar .social-icons a {
+  margin-right: 15px;
+}
+
+.top-bar .social-icons a {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.top-bar .social-icons a:hover {
+  color: var(--accent-color);
+}
+
+/* Encabezado Principal */
+header {
+  display: flex;
+  justify-content: center; /* Centra todo el contenido en el header */
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #f4f4f9; /* Fondo suave */
+  border-bottom: 2px solid #3a3a3a; /* Color del borde inferior */
+  gap: 20px;
+}
+
+/* Logo */
+header .logo {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Espacio entre el logo y el menú */
+}
+
+header .logo img {
+  width: 50px; /* Tamaño base de la imagen */
+  height: auto;
+  margin-right: 10px; /* Espacio entre el logo y el texto */
+  transform: scale(1.2); /* Ajuste en el tamaño */
+}
+
+header .logo .title {
+  font-size: 1.5rem; /* Tamaño del texto para el nombre de la empresa */
+  font-weight: bold;
+  color: #333; /* Color del título del logo */
+}
+
+/* Menú de navegación */
+header nav {
+  display: flex;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+/* Eliminar subrayado de los enlaces en el menú */
+nav ul li a {
+  text-decoration: none; /* Elimina la subrayado */
+}
+
+/* Cuando el menú se activa con la clase 'active' */
+header nav.active {
+  display: block; /* Mostrar el menú */
+  transform: translateY(
+    0
+  ); /* Mover el menú hacia abajo desde fuera de la pantalla */
+}
+
+header nav ul li {
+  position: relative;
+}
+
+header nav ul li a {
+  font-size: 1rem;
+  padding: 8px 15px;
+  border: 2px solid var(--main-color);
+  border-radius: 20px;
+  font-weight: bold;
+
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+
+/* Botones adicionales */
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-buttons button {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: var(--accent-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-buttons button:hover {
+  background-color: var(--main-color);
+}
+
+/* Estilo del dropdown */
+.dropdown-menu {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none; /* Inicialmente oculto */
+  z-index: 10px;
+}
+
+/* Cuando el dropdown tiene la clase 'show' se despliega */
+.dropdown.show .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+}
+/* Íconos sociales, inicialmente ocultos */
+header .social-iconses {
+  display: none; /* Los ocultamos por defecto */
+  gap: 15px; /* Espaciado entre íconos */
+}
+header .social-icons a:hover {
+  color: var(--accent-color);
+}
+
+.dropdown-menu li a {
+  color: var(--text-color);
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+  background-color: var(--hover-color);
+  color: white;
+}
+
+/* Menú hamburguesa alineado a la derecha */
+header .menu-toggle {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--main-color);
+  display: none; /* Escondemos el toggle por defecto */
+  position: relative;
+  top: -20px; /* Posición inicial fuera de la vista */
+  opacity: 0; /* Inicia con opacidad 0 para la animación */
+  transition: all 0.5s ease; /* Animación suave para la transformación */
+}
+/* Animación para el toggle de menú */
+@keyframes slideIn {
+  0% {
+    opacity: 0; /* Comienza invisible */
+    transform: translateY(-20px); /* Comienza desplazado hacia arriba */
+  }
+  100% {
+    opacity: 1; /* Termina visible */
+    transform: translateY(0); /* Termina en su posición normal */
+  }
+}
+/* Responsividad */
+@media (max-width: 768px) {
+  header nav ul li a {
+    padding: 10px 20px;
+    border: none;
+    border-radius: none;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background-color: none;
+  }
+  header {
+    flex-direction: row; /* Mantener en línea los elementos */
+    justify-content: space-between; /* Separar el logo y los botones */
+    border-radius: none;
+    border-bottom: none; /* Color del borde inferior */
+    box-shadow: none;
+  }
+
+  /* Mostrar los íconos sociales solo en pantallas pequeñas */
+  header .social-iconses {
+    display: flex; /* Hacerlos visibles */
+    justify-content: center; /* Centrar los íconos */
+    gap: 20px; /* Espacio entre los íconos */
+    position: static; /* Desactivar el posicionamiento absoluto */
+  }
+
+  /* Ajustar el tamaño de los íconos en modo responsivo */
+  header .social-iconses a {
+    font-size: 22px; /* Ajustar el tamaño si es necesario */
+  }
+
+  header .logo {
+    justify-content: center;
+    gap: 15px; /* Espacio entre íconos y título */
+  }
+
+  header .social-icons {
+    display: flex; /* Mostrar íconos */
+    gap: 10px;
+    justify-content: center;
+  }
+  header nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  /* Diseño del menú de navegación */
+  header nav ul li {
+    width: 100%;
+    margin: 5px 0; /* Espaciado entre los elementos de la lista */
+    padding: 10px; /* Padding interno para dar espacio alrededor del texto */
+    border-radius: 8px; /* Bordes redondeados para un aspecto más suave */
+    background-color: transparent;
+  }
+  header nav ul li:hover {
+    background-color: #5d9aa4;
+    transform: translateY(-3px); /* Efecto de desplazamiento hacia arriba */
+  }
+
+  /* Mostrar el menú cuando se activa el botón */
+  header nav.active ul {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    margin-right: 35vh;
+    gap: 20px;
+    border: none;
+    border-radius: none;
+  }
+  /* Mostrar el menú toggle solo en pantallas pequeñas */
+  header .menu-toggle {
+    display: block; /* Mostrar el toggle solo en pantallas pequeñas */
+    top: 0; /* Regresar a la posición normal */
+    opacity: 1; /* Hacerlo visible */
+    transform: translateY(20px); /* Iniciar desde abajo */
+  }
+  /* Animación para el menú hamburguesa */
+  header .menu-toggle {
+    animation: slideIn 0.5s ease-out forwards; /* Llamamos a la animación de deslizamiento */
+  }
+  /* Animación para el toggle de menú */
+  @keyframes slideIn {
+    0% {
+      opacity: 0; /* Comienza invisible */
+      transform: translateY(-20px); /* Comienza desplazado hacia arriba */
+    }
+    100% {
+      opacity: 1; /* Termina visible */
+      transform: translateY(0); /* Termina en su posición normal */
+    }
+  }
+}
+/* Inicialmente ocultar los dropdowns en pantallas pequeñas */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    display: none !important; /* Desactivar dropdowns en dispositivos móviles */
+  }
+}
+
+/* Ajustes responsivos para botones en pantallas pequeñas */
+@media (max-width: 768px) {
+  header .init,
+  header .Register {
+    padding: 8px 15px; /* Tamaño más pequeño en pantallas reducidas */
+    font-size: 0.9rem; /* Reducir el tamaño del texto */
+  }
+}
+/* Contenedor de los botones */
+header nav .nav-buttons {
+  display: flex; /* Uso de flexbox para alinear los botones */
+  margin-left: 20px; /* Empujar botones hacia la derecha */
+  gap: 10px; /* Separación entre botones */
+  border: none;
+}
+/* Botones de sesión y registro */
+header .init,
+header .Register {
+  color: #fff; /* Texto blanco */
+  padding: 10px 20px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 25px; /* Bordes redondeados */
+  font-size: 1rem; /* Tamaño de texto */
+  font-weight: bold; /* Texto en negrita */
+  cursor: pointer; /* Mostrar cursor de mano */
+  transition: all 0.3s ease; /* Transición suave para hover */
+}
+
+header .init {
+  background-color: #5d9aa4; /* Fondo azul turquesa */
+  box-shadow: 0 4px 8px rgba(93, 154, 164, 0.3); /* Sombra sutil */
+}
+
+header .init:hover {
+  background-color: #468b92; /* Oscurecer al pasar el ratón */
+  transform: scale(1.05); /* Ligeramente más grande */
+}
+
+header .Register {
+  background-color: #2c3e50; /* Fondo azul oscuro */
+  box-shadow: 0 4px 8px rgba(44, 62, 80, 0.3); /* Sombra sutil */
+}
+
+header .Register:hover {
+  background-color: #1a252f; /* Oscurecer al pasar el ratón */
+  transform: scale(1.05); /* Ligeramente más grande */
+}
+/* Ocultar la barra superior en modo responsivo */
+@media (max-width: 768px) {
+  .top-bar {
+    display: none;
+  }
+}
+/* Íconos sociales en el header (solo en modo responsivo) */
+@media (max-width: 768px) {
+  header .social-icons {
+    display: flex;
+    gap: 10px;
+    margin-left: 10px;
+  }
+
+  .social-icons a {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+
+  .social-icons a:hover {
+    color: var(--main-color);
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: none;
+    box-shadow: none;
+  }
+  header nav ul li a:hover {
+    background-color: transparent;
+    color: white;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-buttons {
+    margin-top: 15px;
+  }
+}
+
+/* Main Content */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 20px auto;
+  gap: 20px;
+  padding: 0 10px;
+}
+
+/* Profile Header */
+
+.profile-header {
+  display: flex;
+  justify-content: center;
+
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1 1 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* Barra de navegación dentro del perfil */
+.profile-header nav {
+  padding: 12px 25px;
+  border-radius: 6px;
+}
+
+.profile-header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.profile-header nav ul li {
+  display: inline;
+}
+
+.profile-header nav ul li a {
+  text-decoration: none;
+  color: #1a252f; /* Color claro y profesional para el texto */
+  font-size: 1rem;
+  font-weight: 500; /* Peso de fuente moderado para un toque profesional */
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  letter-spacing: 0.5px; /* Añadir espacio entre las letras para hacerlo más legible */
+}
+
+.profile-header nav ul li a.active {
+  background-color: #1abc9c; /* Un color verde azulado profesional para el enlace activo */
+  color: #fff; /* Texto blanco en el enlace activo */
+}
+
+.profile-header nav ul li a:hover {
+  color: #1abc9c; /* Cambiar color de texto en hover */
+  background-color: transparent; /* Fondo transparente en hover */
+}
+
+/* Añadir una línea debajo de la barra de navegación para un toque más moderno */
+.profile-header nav::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #bdc3c7; /* Gris suave para la línea */
+  margin-top: 10px;
+}
+
+/* Profile Info */
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: #1abc9c solid;
+}
+
+.profile-info h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #ffd700; /* Color dorado */
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+.stats {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Profile Content */
+.profile-content {
+  flex: 2;
+}
+
+.about-section,
+.session-section,
+.therapy-style-section {
+  background-color: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 0;
+}
+
+.read-more {
+  color: #5d9aa4; /* Azul turquesa */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.read-more:hover {
+  color: #468b92; /* Oscurecer al pasar el ratón */
+  text-decoration: underline;
+}
+
+.therapy-tags {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.therapy-tags li {
+  background-color: #e9ecef;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.therapy-tags li:hover {
+  background-color: #5d9aa4; /* Azul turquesa al pasar el ratón */
+  color: #ffffff;
+}
+
+/* Sección del agendado */
+.schedule-section {
+  background-color: #ffffff; /* Blanco limpio */
+  border: 1px solid #e0e0e0; /* Borde gris claro */
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.schedule-section h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #3498db; /* Azul suave para un toque calmante */
+}
+
+/* Etiquetas de formulario */
+label {
+  color: #6c757d; /* Gris medio para las etiquetas */
+  font-weight: 500;
+}
+
+/* Select - Fondo suave y enfoque */
+select {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  background-color: #f4f7fb; /* Gris claro, algo más oscuro para el fondo */
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+select:focus {
+  border-color: #70b1a1; /* Verde pastel para resaltar */
+  background-color: #ffffff; /* Fondo blanco al enfocar */
+}
+
+/* Botones del calendario */
+.calendar div {
+  background-color: #eaf2f8; /* Azul claro pastel */
+  padding: 10px;
+  border-radius: 6px;
+  color: #3498db; /* Azul suave */
+}
+
+.calendar div:hover {
+  background-color: #cce4f7; /* Azul pastel ligeramente más oscuro */
+}
+
+/* Botones en general */
+button {
+  border: none;
+  cursor: pointer;
+  background-color: #70b1a1; /* Verde pastel claro */
+  color: #ffffff; /* Texto blanco */
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #5d8f82; /* Verde pastel oscuro */
+}
+
+.cerrarModalBtn {
+  background-color: white;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: auto;
+  margin: -30px 0 0;
+  margin-left: -28px;
+}
+
+.cerrarModalBtn i {
+  font-size: 1.5rem; /* Tamaño del icono */
+}
+
+.cerrarModalBtn:hover {
+  background-color: #ccc;
+}
+
+/* Estilos del modal */
+.loginModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContent {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  width: 400px;
+}
+
+button.registrarseBtn,
+button.iniciarSesionBtn {
+  background-color: #f39c12; /* Naranja suave */
+  color: #fff;
+}
+
+button.registrarseBtn:hover,
+button.iniciarSesionBtn:hover {
+  background-color: #e67e22; /* Naranja ligeramente más oscuro */
+}

@@ -15,6 +15,10 @@
       <div class="left-panel">
         <img src="Assets/img/Arte-bruta.webp" alt="Ilustración de tortuga" />
       </div>
+      <!-- Loader (inicialmente oculto) -->
+      <div id="loader" class="loader" style="display: none">
+        <div class="spinner"></div>
+      </div>
 
       <!-- Sección del formulario -->
       <div class="right-panel">
@@ -39,13 +43,22 @@
             <div class="forgot-password">
               <a href="#">¿Olvidaste tu contraseña?</a>
             </div>
-            <button
-              type="button"
-              class="btn"
-              onclick="window.location.href='/MainPrincipa.html';">
-              Ingresar
-            </button>
+            <button id="ingresarBtn" type="button" class="btn">Ingresar</button>
           </form>
+
+          <!-- Modal de confirmación -->
+          <div id="confirmationModal" class="modal">
+            <div class="modal-content">
+              <span id="closeModal" class="close">&times;</span>
+              <h3>¿Deseas continuar con la cita?</h3>
+              <p>
+                Si deseas seguir con la cita que elegiste, puedes proceder. Si
+                no, te llevaremos al dashboard.
+              </p>
+              <button id="continueToCita">Continuar con la cita</button>
+              <button id="goToDashboard">Ir al Dashboard</button>
+            </div>
+          </div>
 
           <div class="alternative-login">
             <p>O continúa con</p>
@@ -62,5 +75,7 @@
         </div>
       </div>
     </div>
+    <script src="Assets/js/modal-consulta.js"></script>
+    <!-- Archivo JS para manejar la lógica -->
   </body>
 </html>

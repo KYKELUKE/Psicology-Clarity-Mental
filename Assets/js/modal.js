@@ -1,40 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const openModalBtn = document.getElementById("openModal"); // Botón para abrir el modal desde la sección de marketing
-  const registerModal = document.getElementById("registerModal"); // Modal de registro
-  const closeModalBtn = document.getElementById("closeModal"); // Botón para cerrar el modal
-  const registerForm = document.getElementById("registerForm"); // Formulario de registro
-  const registerNavBtn = document.querySelector(".Register"); // Botón "Registrarse" en la barra de navegación
-
-  // Mostrar el modal al hacer clic en "¡Agenda tu Cita Ahora!"
-  openModalBtn.addEventListener("click", () => {
-    registerModal.style.display = "flex"; // Mostrar el modal
-  });
-
-  // Mostrar el modal al hacer clic en "Registrarse" desde la barra de navegación
-  registerNavBtn.addEventListener("click", () => {
-    registerModal.style.display = "flex"; // Mostrar el modal
-  });
-
-  // Cerrar el modal al hacer clic en la "X"
-  closeModalBtn.addEventListener("click", () => {
-    registerModal.style.display = "none"; // Ocultar el modal
-  });
-
-  // Cerrar el modal al hacer clic fuera del contenido
-  window.addEventListener("click", (event) => {
-    if (event.target === registerModal) {
-      registerModal.style.display = "none"; // Ocultar el modal
-    }
-  });
-
-  // Redirigir al archivo evaluacion.html al enviar el formulario
-  registerForm.addEventListener("submit", (event) => {
-    event.preventDefault(); // Evitar el comportamiento estándar del formulario
-    window.location.href = "evaluacion.html"; // Redirigir a evaluacion.html
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
   const sliderTrack = document.querySelector(".slider-track");
   const dots = document.querySelectorAll(".dot");
 
