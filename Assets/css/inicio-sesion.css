@@ -30,10 +30,9 @@ body {
 }
 
 .left-panel img {
-  width: 100%;
-  max-width: 150vh;
-  height: auto;
-  object-fit: contain;
+  width: 150%;
+  max-width: 180vh;
+  height: 100vh;
 }
 
 /* Panel derecho */

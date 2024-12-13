@@ -242,7 +242,11 @@
     </div>
   </div>
 
-<!-- Sección de Evaluación Virtual y Cita -->
+
+
+</section>
+
+<!-- Sección de Evaluación Virtual -->
 <section class="marketing" id="marketing">
   <div class="marketing-content">
     <h2 class="animate__animated animate__fadeIn">
@@ -252,10 +256,37 @@
       Realiza una evaluación virtual con nosotros y agenda tu cita para empezar tu camino hacia una mejor salud mental.
     </p>
   </div>
-  <div class="marketing-cta">
-    <button id="openModal" class="btn-cta">¡Agenda tu Cita Ahora!</button>
+</section>
+
+<!-- Sección de Evaluaciones -->
+<section class="evaluaciones">
+  <div class="evaluacion" style="background-color: #4CAF50;"> <!-- Estrés -->
+    <h3 class="animate__animated animate__fadeIn">Evaluación de Estrés</h3>
+    <p class="animate__animated animate__fadeIn">
+      Identifica los factores estresantes que afectan tu vida y aprende a manejarlos eficazmente. Realiza esta evaluación para obtener estrategias personalizadas.
+    </p>
+    <button onclick="window.location.href='/estres.html'" class="btn-cta">Realizar Evaluación</button>
+
+  </div>
+
+  <div class="evaluacion" style="background-color: #FF9800;"> <!-- Ansiedad -->
+    <h3 class="animate__animated animate__fadeIn">Evaluación de Ansiedad</h3>
+    <p class="animate__animated animate__fadeIn">
+      Evalúa el nivel de ansiedad que experimentas y descubre técnicas que te ayudarán a relajarte y reducir la tensión mental. ¡Comienza ahora!
+    </p>
+    <button onclick="window.location.href='/ansiedad.html'" class="btn-cta">Realizar Evaluación</button>
+  </div>
+
+  <div class="evaluacion" style="background-color: #F44336;"> <!-- Depresión -->
+    <h3 class="animate__animated animate__fadeIn">Evaluación de Depresión</h3>
+    <p class="animate__animated animate__fadeIn">
+      Descubre si tus emociones están relacionadas con la depresión. Esta evaluación te ayudará a identificar posibles síntomas y te guiará hacia el apoyo adecuado.
+    </p>
+    <button onclick="window.location.href='/drepresion.html'" class="btn-cta">Realizar Evaluación</button>
   </div>
 </section>
+
+
 
 <!-- Modal de Registro -->
 <div class="modal" id="registerModal">
@@ -286,18 +317,28 @@
 
     
 <section>
-    <div class="psychology-section">
-      <div class="psychology-info">
-        <h2>
-          Atención Psicológica y Psiquiátrica <br />
-          <span>Presencial y Virtual</span>
-        </h2>
+  <div class="psychology-section">
+    <div class="psychology-info">
+      <h2>
+        Atención Psicológica y Psiquiátrica <br />
+        <span>Virtual</span>
+      </h2>
+      <p class="main-info">
+        Ofrecemos servicios especializados en el manejo de depresión, ansiedad y estrés, con atención virtual.
+      </p>
+      <p class="highlight-info">
+        ¡Conéctate desde la comodidad de tu hogar para recibir apoyo psicológico inmediato y profesional! Nuestra plataforma virtual te brinda acceso rápido y seguro a los mejores especialistas en salud mental.
+      </p>
+    </div>
+  </div>
+  <div>
         <p>
           Contamos con atención de forma virtual en plataformas
           como <strong>WhatsApp</strong> y <strong>Meet</strong>. Nos
           especializamos en brindar el apoyo adecuado para cada etapa de la
-          vida, tanto en niños como en adultos.
+          vida.
         </p>
+      </div>
         <div class="contact-icons">
           <div class="icon">
             <img src="Assets/img/whatsapp.png" alt="WhatsApp" />
@@ -311,8 +352,10 @@
       </div>
       <div class="Virtual-class">
         <img src="Assets/img/DALL·E 2024-11-18 19.18.08 - Una representación realista de un psicólogo o psiquiatra interactuando con un paciente en la vida real. La escena muestra una consulta presencial en u.webp" alt="">
-        <img src="Assets/img/DALL·E 2024-11-18 19.17.59 - Una escena realista de una charla virtual por Zoom donde un psicólogo o psiquiatra está conduciendo una sesión grupal. Muestra a varias personas conec.webp" alt="">
+        <img src="Assets/img/virtual.jpeg" alt="">
       </div>
+
+
     </section>
 
 
@@ -344,10 +387,10 @@
             <strong>Se especializa en:</strong> Autoestima, Duelo, Sexualidad,
             Ansiedad, Cambios de Vida
           </p>
-          <p><strong>Servicios desde:</strong> $ 115.000 COP</p>
+          <p><strong>Servicios desde:</strong> $ 77.00 COP</p>
           <div class="card-buttons">
             <button class="btn-secondary">Ver más</button>
-            <button class="btn-primary">Ver perfil</button>
+            <button class="btn-primary" onclick="window.location.href='/psicology-perfil.html'">Ver perfil</button>
           </div>
         </div>
 
@@ -365,10 +408,10 @@
             <strong>Se especializa en:</strong> Duelo, Depresión, Ansiedad,
             LGBT+
           </p>
-          <p><strong>Servicios desde:</strong> $ 140.000 COP</p>
+          <p><strong>Servicios desde:</strong> $ 77.00 COP</p>
           <div class="card-buttons">
             <button class="btn-secondary">Ver más</button>
-            <button class="btn-primary" onclick="">Ver perfil</button>
+            <button class="btn-primary" onclick="window.location.href='/psicology-perfil.html'">Ver perfil</button>
           </div>
         </div>
 
@@ -383,10 +426,10 @@
             <strong>Se especializa en:</strong> Relaciones interpersonales,
             Ansiedad, Traumas, Depresión
           </p>
-          <p><strong>Servicios desde:</strong> $ 115.000 COP</p>
+          <p><strong>Servicios desde:</strong> $ 77.00 COP</p>
           <div class="card-buttons">
             <button class="btn-secondary">Ver más</button>
-            <button class="btn-primary">Ver perfil</button>
+            <button class="btn-primary" onclick="window.location.href='/psicology-perfil.html'">Ver perfil</button>
           </div>
         </div>
       </div>
@@ -398,7 +441,7 @@
       <div class="age-section">
         <h3>Atención Exclusiva para Personas de <span>18 a 34 Años</span></h3>
         <p class="age-description">
-          Nos especializamos en brindar apoyo y bienestar mental a jóvenes y adultos. Si tienes entre 18 y 42 años, este es tu espacio para crecer y sanar.
+          Nos especializamos en brindar apoyo y bienestar mental a jóvenes y adultos. Si tienes entre 18 y 34 años, este es tu espacio para crecer y sanar.
         </p>
         <div class="age-highlight">
           ¡Tu bienestar mental empieza aquí!

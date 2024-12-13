@@ -604,6 +604,14 @@ header .Register:hover {
   }
 }
 
+.virtual-atention {
+  display: block;
+  text-align: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 20px;
+}
+
 /* Sección de beneficios */
 .benefits {
   padding: 90px 40px;
@@ -756,7 +764,7 @@ header .Register:hover {
 
 .Virtual-class img {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -1079,57 +1087,182 @@ header .Register:hover {
   background: #555;
 }
 
-/* Estilos para la sección de Marketing */
+/* Estilo para la sección de Marketing (Evaluación Virtual) */
 .marketing {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  background-color: #00bfaf8c;
+  padding: 60px 15px;
   text-align: center;
-  padding: 50px 20px;
-  border-radius: 15px;
+  border-bottom: 4px solid #ddd;
 }
 
-.marketing h2 {
-  font-size: 32px;
-  color: #16a085;
+.marketing-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
   font-weight: bold;
+  text-transform: uppercase;
+  animation: fadeIn 1s ease-out;
 }
 
-.marketing p {
-  font-size: 18px;
+.marketing-content p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  opacity: 0.85;
   color: #555;
-  margin-top: 10px;
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Botón en la sección de marketing */
+.marketing .btn-cta {
+  background-color: #ff9800;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.marketing .btn-cta:hover {
+  background-color: #e68900;
+  transform: translateY(-5px);
+}
+
+/* Animación de FadeIn */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Sección de Evaluaciones */
+.evaluaciones {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 60px;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  width: 70;
+  justify-content: center;
+}
+
+/* Tarjetas de Evaluación */
+.evaluacion {
+  width: 100%; /* Por defecto ocupará todo el ancho disponible */
+  max-width: 320px; /* Establecer un ancho máximo razonable */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.evaluacion h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.evaluacion p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.evaluacion:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.2);
 }
 
 .btn-cta {
-  background-color: #16a085;
-  color: white;
-  padding: 15px 30px;
-  font-size: 18px;
+  background-color: white;
+  color: #333;
+  padding: 12px 30px;
+  font-size: 1.1rem;
   border: none;
-  border-radius: 8px;
-  margin-top: 20px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-transform: uppercase;
+  align-self: center;
 }
 
 .btn-cta:hover {
-  background-color: #1abc9c;
-  transform: scale(1.05);
+  background-color: #ddd;
+  transform: translateY(-5px);
 }
 
-/* Estilos para el Modal */
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
+/* Responsividad */
+@media (max-width: 768px) {
+  .evaluaciones {
+    gap: 10px;
+  }
+
+  .evaluacion {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .marketing-content h2 {
+    font-size: 2rem;
+  }
+
+  .marketing-content p {
+    font-size: 1rem;
+  }
+
+  .btn-cta {
+    font-size: 1rem;
+    padding: 10px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .evaluacion {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .evaluacion {
+    width: 100%; /* Las tarjetas ocupan todo el ancho disponible en pantallas pequeñas */
+    margin: 0 auto; /* Centrar las tarjetas */
+    max-width: 100%; /* Evita que se salga del contenedor */
+  }
+
+  .evaluaciones {
+    gap: 10px; /* Espacio entre las tarjetas reducido */
+  }
+}
+
+@media (max-width: 480px) {
+  .evaluacion {
+    width: 100%; /* En pantallas muy pequeñas, las tarjetas ocuparán el 100% del ancho */
+    padding: 20px; /* Reducir padding en pantallas pequeñas */
+  }
 }
 
 /* Contenido del Modal */
@@ -1232,7 +1365,7 @@ input:focus {
   flex-direction: column; /* Cambia la dirección del contenido a columna */
   padding: 10px 5px; /* Espaciado dentro del footer */
   box-sizing: border-box;
-  margin-left: -8vh;
+  margin-left: -6px;
 }
 /* Contenedor de las secciones dentro del footer */
 .footer-container {

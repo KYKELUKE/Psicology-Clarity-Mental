@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evaluación Integral de Ansiedad</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f4f7f9;
+        color: #333;
+        line-height: 1.6;
+        display: flex;
+        justify-content: center;
+        padding: 2rem 1rem;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 800px;
+      }
+
+      h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #00a79d;
+        text-align: center;
+        margin-bottom: 2rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      form {
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 3rem;
+        border-radius: 10px;
+      }
+
+      .form-group {
+        margin-bottom: 2rem;
+      }
+
+      .form-group label {
+        font-size: 1.2rem;
+        display: block;
+        margin-bottom: 1rem;
+        color: #333;
+      }
+
+      .radio-group {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .radio-option {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        background-color: #f9f9f9;
+        padding: 0.5rem;
+        border-radius: 8px;
+        border: 2px solid #e0e0e0;
+        transition: all 0.3s ease;
+      }
+
+      .radio-option:hover {
+        background-color: #f0f0f0;
+      }
+
+      .radio-option input {
+        margin-right: 0.5rem;
+        accent-color: #00a79d;
+      }
+
+      .radio-option input[type="radio"] {
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+
+      .radio-option label {
+        flex-grow: 1;
+        margin-bottom: 0;
+        cursor: pointer;
+        font-size: 1rem;
+      }
+
+      .submit-btn {
+        background-color: #00a79d;
+        color: #fff;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        cursor: pointer;
+        width: 100%;
+        font-size: 1.1rem;
+      }
+
+      .submit-btn:hover {
+        background-color: #0069d9;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+
+      <h1>Cuestionario de Evaluación de Estrés</h1>
+      <form>
+          <div class="form-group">
+              <label>1. ¿Con qué frecuencia te sientes abrumado por tus responsabilidades?</label>
+              <div class="radio-group">
+                  <div class="radio-option">
+                      <input type="radio" id="estres1_1" name="estres1" value="nunca" required />
+                      <label for="estres1_1">Nunca</label>
+                  </div>
+                  <div class="radio-option">
+                      <input type="radio" id="estres1_2" name="estres1" value="raravez" />
+                      <label for="estres1_2">Rara vez</label>
+                  </div>
+                  <div class="radio-option">
+                      <input type="radio" id="estres1_3" name="estres1" value="aveces" />
+                      <label for="estres1_3">A veces</label>
+                  </div>
+                  <div class="radio-option">
+                      <input type="radio" id="estres1_4" name="estres1" value="frecuentemente" />
+                      <label for="estres1_4">Frecuentemente</label>
+                  </div>
+                  <div class="radio-option">
+                      <input type="radio" id="estres1_5" name="estres1" value="siempre" />
+                      <label for="estres1_5">Siempre</label>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="form-group">
+              <label>2. ¿Experimentas tensión muscular o dolores de cabeza relacionados con el estrés?</label>
+              <div class="radio-group">
+                  <div class="radio-option">
+                      <input type="radio" id="estres2_1" name="estres2" value="nunca" required />
+                      <label for="estres2_1">Nunca</label>
+                  </div>
+                  <div class="radio-option">
+                      <input type="radio" id="estres2_2" name="estres2" value="raravez" />
+                      <label for="estres2_2">Rara vez</label>
+                  </div>
+                  <div class="radio-option">
+                      <input type="radio" id="estres2_3" name="estres2" value="aveces" />
+                      <label for="estres2_3">A veces</label>
+                  </div>
+                  <div class="radio-option">
+                      <input type="radio" id="estres2_4" name="estres2" value="frecuentemente" />
+                      <label for="estres2_4">Frecuentemente</label>
+                  </div>
+                  <div class="radio-option">
+                      <input type="radio" id="estres2_5" name="estres2" value="siempre" />
+                      <label for="estres2_5">Siempre</label>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="form-group">
+              <label>3. ¿Tienes dificultades para concentrarte debido al estrés?</label>
+              <div class="radio-group">
+                  <div class="radio-option">
+                      <input type="radio" id="estres3_1" name="estres3" value="nunca" required />
+                      <label for="estres3_1">Nunca</label>
+                  </div>
+                  <div class="radio-option">
+                      <input type="radio" id="estres3_2" name="estres3" value="raravez" />
+                      <label for="estres3_2">Rara vez</label>
+                  </div>
+                  <div class="radio-option">
+                      <input type="radio" id="estres3_3" name="estres3" value="aveces" />
+                      <label for="estres3_3">A veces</label>
+                  </div>
+                  <div class="radio-option">
+                      <input type="radio" id="estres3_4" name="estres3" value="frecuentemente" />
+                      <label for="estres3_4">Frecuentemente</label>
+                  </div>
+                  <div class="radio-option">
+                      <input type="radio" id="estres3_5" name="estres3" value="siempre" />
+                      <label for="estres3_5">Siempre</label>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="form-group">
+              <label>4. ¿Notas cambios en tus hábitos de sueño debido al estrés?</label>
+              <div class="radio-group">
+                  <div class="radio-option">
+                      <input type="radio" id="estres4_1" name="estres4" value="nunca" required />
+                      <label for="estres4_1">Nunca</label>
+                  </div>
+                  <div class="radio-option">
+                      <input type="radio" id="estres4_2" name="estres4" value="raravez" />
+                      <label for="estres4_2">Rara vez</label>
+                  </div>
+                  <div class="radio-option">
+                      <input type="radio" id="estres4_3" name="estres4" value="aveces" />
+                      <label for="estres4_3">A veces</label>
+                  </div>
+                  <div class="radio-option">
+                      <input type="radio" id="estres4_4" name="estres4" value="frecuentemente" />
+                      <label for="estres4_4">Frecuentemente</label>
+                  </div>
+                  <div class="radio-option">
+                      <input type="radio" id="estres4_5" name="estres4" value="siempre" />
+                      <label for="estres4_5">Siempre</label>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="form-group">
+              <label>5. ¿Sientes que el estrés afecta tu estado de ánimo o relaciones personales?</label>
+              <div class="radio-group">
+                  <div class="radio-option">
+                      <input type="radio" id="estres5_1" name="estres5" value="nunca" required />
+                      <label for="estres5_1">Nunca</label>
+                  </div>
+                  <div class="radio-option">
+                      <input type="radio" id="estres5_2" name="estres5" value="raravez" />
+                      <label for="estres5_2">Rara vez</label>
+                  </div>
+                  <div class="radio-option">
+                      <input type="radio" id="estres5_3" name="estres5" value="aveces" />
+                      <label for="estres5_3">A veces</label>
+                  </div>
+                  <div class="radio-option">
+                      <input type="radio" id="estres5_4" name="estres5" value="frecuentemente" />
+                      <label for="estres5_4">Frecuentemente</label>
+                  </div>
+                  <div class="radio-option">
+                      <input type="radio" id="estres5_5" name="estres5" value="siempre" />
+                      <label for="estres5_5">Siempre</label>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="form-group">
+
+        <!-- Se mantienen las mismas preguntas que en el diseño anterior, solo se actualizó el CSS -->
+
+        <button type="submit" class="submit-btn">Enviar Evaluación</button>
+      </form>
+    </div>
+  </body>
+</html>
