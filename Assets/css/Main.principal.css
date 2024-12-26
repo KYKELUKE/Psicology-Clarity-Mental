@@ -104,23 +104,54 @@ h3 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Global Styling */
+:root {
+  --transition-duration: 0.3s;
+  --card-radius: 10px;
+  --padding-base: 20px;
+}
+
+/* Global Styling */
+:root {
+  --transition-duration: 0.3s;
+  --card-radius: 12px;
+  --padding-base: 24px;
+  --font-family: "Roboto", sans-serif;
+}
+
+/* Universal Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
 /* Header */
 .dashboard-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: var(--padding-base);
   background-color: var(--secondary-color);
-  box-shadow: 0px 4px 10px var(--card-shadow-color);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
-  margin: 20px;
+  margin: var(--padding-base);
+  max-height: 100px;
 }
 
 .dashboard-header .welcome-text h2 {
-  font-size: 26px;
-  font-weight: 700;
+  font-size: 28px;
+  font-weight: bold;
   color: var(--text-color);
-  text-shadow: 1px 1px var(--card-shadow-color);
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .dashboard-header .cta-button {
@@ -131,101 +162,89 @@ h3 {
   );
   color: white;
   border: none;
-  padding: 12px 25px;
-  border-radius: 8px;
+  padding: 14px 30px;
+  border-radius: 10px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all var(--transition-duration) ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .dashboard-header .cta-button:hover {
   background: var(--button-hover-color);
   transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Additional Improvements */
-body {
-  font-family: "Roboto", sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-/* Optional Scrollbar Styling */
-.sidebar::-webkit-scrollbar {
-  width: 8px;
-}
-
-.sidebar::-webkit-scrollbar-thumb {
-  background-color: var(--main-color);
-  border-radius: 4px;
-}
-
-.sidebar::-webkit-scrollbar-thumb:hover {
-  background-color: var(--button-hover-color);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Main Content */
 .content-sections {
-  padding: 20px;
+  padding: var(--padding-base);
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .section-title {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: var(--padding-base);
   color: var(--text-color);
+  text-align: left;
+  border-left: 5px solid var(--main-color);
+  padding-left: 10px;
 }
 
 /* Cards Section */
 .cards-section .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
 }
 
 .card {
-  background: white;
-  padding: 20px;
+  background: #fff;
+  padding: var(--padding-base);
   text-align: center;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px var(--card-shadow-color);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: var(--card-radius);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition-duration) ease,
+    box-shadow var(--transition-duration) ease;
 }
 
 .card i {
-  font-size: 36px;
+  font-size: 40px;
   color: var(--main-color);
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .card p {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   color: var(--text-color);
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 8px 15px var(--card-shadow-color);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* Diary Section */
 .diary-section .emotions {
   display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
+  justify-content: space-between;
+  margin-top: var(--padding-base);
+  gap: 20px;
 }
 
 .diary-section .emoji {
-  font-size: 36px;
+  font-size: 48px;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease-in-out, color var(--transition-duration) ease;
 }
 
 .diary-section .emoji:hover {
-  transform: scale(1.2);
+  transform: scale(1.3);
+  color: var(--main-color);
 }
 
 /* Recommendations Section */
@@ -233,15 +252,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: var(--padding-base);
 }
 
 .recommendations .view-all {
   text-decoration: none;
   color: var(--main-color);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: color var(--transition-duration) ease;
 }
 
 .recommendations .view-all:hover {
@@ -250,47 +269,49 @@ body {
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
 }
 
 .card-grid .card {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px var(--card-shadow-color);
+  background: #fff;
+  border-radius: var(--card-radius);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform var(--transition-duration) ease,
+    box-shadow var(--transition-duration) ease;
 }
 
 .card-grid .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 8px 15px var(--card-shadow-color);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .card-grid .card-image {
   width: 100%;
-  height: 150px;
+  height: 180px;
   object-fit: cover;
 }
 
 .card-grid .card-content {
-  padding: 15px;
+  padding: 20px;
 }
 
 .card-grid .card-title {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: bold;
   margin-bottom: 10px;
+  color: var(--text-color);
 }
 
 .card-grid .card-info {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--main-color);
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .card-grid .card-description {
-  font-size: 14px;
-  color: var(--text-color);
-  line-height: 1.5;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
 }
